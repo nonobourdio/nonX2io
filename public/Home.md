@@ -1,2 +1,2 @@
 # Home
-This is my website, i use it to host my portfolio and to share ressources
+Site en développement, pour l'instant c'est pas fameux mais j'y travaille
