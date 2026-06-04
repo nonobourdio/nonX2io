@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nX2i</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      background-color: #0b0b0c;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .title {
+      color: #faedd4;
+      font-family: 'Arial Black', Gadget, sans-serif;
+      font-size: 37px;
+      font-weight: 700;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .title:hover {
+      opacity: 0.8;
+    }
+
+    .panel {
+      display: flex;
+      justify-content: start;
+      align-content: center;
+      margin: 100px 100px 300px 100px;
+    }
+  
+    .left-menu {
+      align-self: center;
+      padding: 0 9px 0 0;
+    }
+
+    .profile-pic {
+      border: 1px dotted #ffffff;
+      display: inline-block;
+    }
+
+    .profile-pic pre {
+      color: #faedd4;
+      font-family: 'Arial Black', Gadget, sans-serif;
+      font-size: 5px;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0;
+      width: 195px;
+      height: 180px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-switcher {
+      border: 1px dotted #ffffff;
+      margin-top: 8px;
+    }
+
+    .page-switcher ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .page-switcher li {
+      color: #faedd4;
+      font-family: 'Arial Black', Gadget, sans-serif;
+      font-weight: 700;
+      padding: 4px 0;
+      cursor: pointer;
+    }
+
+    .page-switcher li a {
+      color: #faedd4;
+      text-decoration: none;
+    }
+
+    .page-switcher li a:hover {
+      text-decoration: underline;
+    }
+
+    .mainpage {
+      border: 1px dotted #ffffff;
+      min-width: 500px;
+      flex-shrink: 1;
+      color: #faedd4;
+      padding: 20px 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    .mainpage h1,
+    .mainpage h2,
+    .mainpage h3 {
+      font-family: 'Arial Black', Gadget, sans-serif;
+      color: #faedd4;
+    }
+
+    .mainpage h1 { font-size: 28px; border-bottom: 1px dotted #555; padding-bottom: 8px; }
+    .mainpage h2 { font-size: 22px; }
+    .mainpage h3 { font-size: 18px; }
+
+    .mainpage a { color: #8ab4f8; }
+    .mainpage a:hover { color: #aecbfa; }
+
+    .mainpage blockquote {
+      border-left: 3px solid #555;
+      margin-left: 0;
+      padding-left: 16px;
+      color: #ccc;
+    }
+
+    .mainpage ul, .mainpage ol { padding-left: 24px; }
+
+    .mainpage hr { border: none; border-top: 1px dotted #555; }
+
+    @media (max-width: 480px) {
+      .left-menu {
+        align-self: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="./index.html" class="title">nonX2io</a>
+
+  <div class="panel">
+    <div class="left-menu">
+      <div class="profile-pic">
+        <pre>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⠋⠁⠀⠀⡴⠁⠀⠀⠀⠀⠀⠀⣼⡿⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⣼⠁⠀⠀⠀⠀⠈⠆⠀⠈⣇⠀⠀⠉⠓⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣀⠔⡁⠀⠀⠀⠀⢸⡃⠀⢀⣀⣤⠴⠒⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡀⠀⠀⠀⠀⠰⣭⣩⣖⣒⣢⣤⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣡⢎⠀⠀⠀⠀⠀⠈⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠖⠀⠀⠠⣴⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⡷⣄⠀⠀⠀⠉⢦⣄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠀⢀⡴⠋⠀⠀⣰⢿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⢸⠘⢆⠀⠀⠀⠰⡌⢷⡀⠀⠀
+⢀⠀⠀⠀⠀⠀⠀⣰⠃⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠂⠀⢀⡠⠚⠁⣀⣴⡿⠁⠀⠀⣴⢃⡞⢠⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⢀⠀⡇⠀⠀⣧⢸⣦⠀⠀⠀⢹⣣⡹⡄⠀
+⠁⠀⠀⠀⠀⠀⢰⠃⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠀⢀⡔⠋⠀⣠⢞⣥⡟⠁⠀⢀⣼⢣⠿⡇⣾⠀⠀⠀⠀⡞⠀⠀⠀⠀⠀⡼⠀⡇⠀⠀⢸⡘⡞⢦⠀⠀⠀⣇⠙⠻⡄
+⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⢀⣴⠏⠀⢀⡔⠁⠀⣠⣾⠷⠋⡿⠀⠀⣠⣾⣫⠏⠀⠇⡟⠀⠀⢀⡼⠀⠀⠀⠀⠀⣸⠃⢸⡇⠀⠀⠀⡇⣷⠈⢧⠀⠀⢸⡄⠀⠀
+⠀⠀⠀⠀⠀⠋⠀⠀⠀⠀⠀⠀⣠⡾⠁⢀⡴⠁⠀⣠⣾⣟⣁⣀⣼⣁⣠⠞⠁⠸⠃⠀⢰⢸⡇⠀⠀⡼⣡⠀⠀⠀⠀⢠⠇⠀⡼⠀⠀⠀⠀⣇⣿⡀⠸⣧⡀⠈⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠟⢀⣴⠋⢀⡤⠞⠁⠀⠀⠀⣴⣃⣟⣛⣛⡿⠶⢤⣄⣌⣿⠁⠀⣸⠟⠁⠀⠀⠀⣠⡿⠀⢀⡇⠀⠀⠀⡠⣿⠃⡇⠀⡏⢣⠀⢻⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⢏⡴⡻⢁⣴⠋⠀⠀⠀⠀⢀⣴⡿⠛⢩⢟⡟⠛⢷⡲⢤⡛⢻⠓⡲⠿⠂⠀⠀⠀⣴⢯⠇⢀⣾⡇⠀⠀⢸⠃⣇⡾⠁⠀⢱⠈⢇⢸⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣰⣻⣳⠊⣼⡗⠉⠸⡇⠀⠀⠀⠀⠻⡏⠀⠀⡟⢸⣷⣶⠀⠃⠀⠁⣯⣾⠁⠀⢀⡴⢃⡞⠁⡼⠀⡼⢹⠇⠀⠀⣸⠀⠉⠁⠀⠀⢸⠀⠘⢿⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣰⣻⡿⠁⠜⠁⠀⠀⠀⢻⠀⠀⠀⠀⠀⠀⠀⠀⣿⣏⣿⡏⠀⠀⠀⣴⠏⠀⣠⣾⣿⡴⠋⣰⣿⢃⡞⠁⢸⠀⢀⢠⠇⠀⢀⠀⠀⠀⡸⠀⠀⠘⠀⠀
+⠀⠀⠀⠀⠀⠀⡸⣷⠏⢀⠀⠀⠀⠀⠀⢰⡈⡇⠀⡆⡄⠀⠀⠀⠀⠙⠋⠉⠁⢀⣠⠞⣀⡴⠊⢡⣿⠟⣠⢶⣷⣿⣟⡻⣇⣿⠀⢀⡟⠀⠀⡾⠀⠀⡴⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣰⢳⠇⠀⠈⣆⠀⠀⠀⠀⠀⠙⣼⣤⡇⡰⠂⠀⠀⠀⠀⠠⣧⣴⣿⠗⠋⠁⠀⣠⠟⠁⠀⠁⣰⣿⣿⠚⡇⢻⣷⢇⣾⣤⠀⣼⡇⠀⣸⣿⠁⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢰⢧⠏⠀⠀⠀⠘⣆⠀⠀⠀⠀⠐⣎⢷⡉⢡⠀⠀⠀⠀⣠⢄⡼⠋⠉⠀⠀⡀⠚⠁⠀⠀⠀⠀⢿⣿⡟⠀⣗⣾⣿⣿⠟⣿⡼⠁⡇⣼⣽⠇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⣎⡟⠀⠀⠀⠀⠀⠘⣆⠀⠀⠘⣄⠈⠳⡙⣞⣄⠀⢀⢮⡴⠟⣒⣚⣉⣡⣛⡒⠀⠀⠀⠀⠀⢦⣀⣽⠀⠈⣿⣻⠋⡇⠀⠟⠁⢀⡿⣵⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠠⠘⡾⠀⠀⠀⠀⠀⠀⠀⠈⢆⠀⢤⡈⢦⠀⢻⣮⣻⣴⠁⣠⠖⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣴⠟⠏⡆⢰⡿⠟⢁⡇⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠰⠃⣆⠀⠀⠀⠀⢀⠀⠀⠈⢦⠀⠻⣮⡣⡈⢳⠉⢻⣾⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠞⠁⠀⣧⠷⢋⣤⠶⠛⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢻⡀⠀⠀⠀⠈⠣⣀⠀⠈⢣⡀⠱⣝⠷⣌⣷⠊⢀⠽⣋⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣞⣫⠤⢶⡟⠁⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢧⠀⠀⠀⠀⠀⠈⠳⣄⠀⠹⠀⠘⣆⡟⣿⣶⠛⠾⠁⠀⠐⠿⠾⢽⣖⣦⣄⡀⠀⠉⡏⢉⡌⣰⠏⣰⠁⠀⢠⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⠀⠈⢇⠀⠀⠀⠀⠀⠀⠸⡟⡶⢵⣶⣬⣳⠀⠽⢷⠊⠉⠉⠀⠀⠀⠀⠀⠉⠉⠉⠀⠀⠃⣸⣿⢃⡴⠁⠀⠀⢼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⠀⢘⣆⠀⠀⠀⣄⠀⠀⣧⠻⣄⡎⢳⠾⠭⠁⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡿⠋⠁⠀⢀⡀⠀⣴⡾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢲⠀⠀⠀⠘⡀⠀⣸⠻⣦⠀⠀⢹⣠⡀⢸⣷⣌⡳⠈⢇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⢾⣋⡠⢤⡶⠟⠉⠀⣼⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⡆⠀⢀⣰⣧⠀⣿⠀⣹⣦⡀⠀⣿⣿⡼⡟⣿⣿⣄⠈⠧⠀⣀⠀⠀⠀⠀⠀⠀⠴⢒⣾⠟⢋⣉⡥⠞⣋⡤⠖⠀⣰⣿⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣟⣇⣠⣾⣷⣿⣼⣿⢀⣿⣄⠱⡄⢹⣽⣽⣿⠙⣿⣽⣳⣄⢠⠁⠀⠀⠀⠀⠀⠀⣠⡾⠥⠶⠭⠵⠒⢋⡍⠀⠀⣰⢳⣷⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠻⣿⣟⣿⣿⣿⣿⣿⣾⣿⡟⢿⣿⣾⣿⣷⣿⡁⠈⠹⣿⣿⡿⠲⢦⣄⣀⣀⡴⢾⡿⢀⣠⠇⠀⠀⣰⢿⡇⢀⡼⢁⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠘⢿⠉⠙⠛⠛⠿⠿⢿⣇⢸⣿⣿⣿⣿⣟⢷⣤⡀⠀⣽⢃⡄⠀⠀⣠⠀⣰⢿⡇⣾⠋⠀⣠⠞⠁⡜⣀⠞⠑⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠈⢷⡀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⠏⣽⣿⣿⣿⣷⣼⠁⠀⣴⠇⡰⠃⢸⣵⠃⣀⠜⠁⠀⣰⠿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⢧⢀⢀⣶⣶⣤⣄⣀⠀⠀⠁⠁⠚⢿⣿⣿⣿⣿⣿⢀⠜⣼⠞⠁⢀⣿⣥⠞⠁⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠈⠉⠙⠛⠛⠛⠛⠛⠃⠘⠛⠛⠛⠛⠙⠫⠿⠿⠿⠿⠟⠻⠛⠛⠛⠛⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+      </div>
+      <div class="page-switcher">
+        <ul>
+          <li><a href="#" data-page="Home">Home</a></li>
+          <li><a href="#" data-page="Portfolio">Portfolio</a></li>
+          <li><a href="#" data-page="Ressources">Ressources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mainpage">
+      <br>
+    </div>
+  </div>
+
+  <script>
+    if (window.location.protocol === 'file:') {
+      document.querySelector('.mainpage').innerHTML =
+        '<p style="color:#f88">Ouvre ce fichier avec un serveur HTTP local :<br>' +
+        '<code style="color:#8ab4f8">python3 -m http.server 8080</code><br>' +
+        'puis va sur <a href="http://localhost:8080">http://localhost:8080</a></p>';
+    } else {
+      const mainpage = document.querySelector('.mainpage');
+
+      function loadPage(name) {
+        fetch(name + '.md')
+          .then(res => {
+            if (!res.ok) throw new Error('Page introuvable');
+            return res.text();
+          })
+          .then(md => {
+            mainpage.innerHTML = marked.parse(md);
+          })
+          .catch(err => {
+            mainpage.innerHTML = `<p>Erreur : ${err.message}</p>`;
+          });
+      }
+
+      document.querySelectorAll('.page-switcher [data-page]').forEach(el => {
+        el.addEventListener('click', e => {
+          e.preventDefault();
+          loadPage(el.dataset.page);
+        });
+      });
+
+      loadPage('Home');
+    }
+  </script>
+</body>
+</html>
