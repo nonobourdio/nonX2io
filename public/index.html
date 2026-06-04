@@ -86,6 +86,66 @@
       text-decoration: underline;
     }
 
+    .tree {
+      --spacing: 1.5rem;
+      --radius: 8px;
+      margin-top: 6px;
+    }
+
+    .tree li {
+      display: block;
+      position: relative;
+      padding-left: calc(2 * var(--spacing) - var(--radius) - 2px);
+      line-height: var(--spacing);
+    }
+
+    .tree ul {
+      margin-left: calc(var(--radius) - var(--spacing));
+      padding-left: 0;
+    }
+
+    .tree ul li {
+      border-left: 2px solid #555;
+    }
+
+    .tree ul li:last-child {
+      border-color: transparent;
+    }
+
+    .tree ul li::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: calc(var(--spacing) / -2);
+      left: -2px;
+      width: calc(var(--spacing) + 2px);
+      height: calc(var(--spacing) + 1px);
+      border: solid #555;
+      border-width: 0 0 2px 2px;
+    }
+
+    .tree summary {
+      display: block;
+      cursor: pointer;
+    }
+
+    .tree summary::marker,
+    .tree summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .tree summary:focus {
+      outline: none;
+    }
+
+    .tree summary:focus-visible {
+      outline: 1px dotted #faedd4;
+    }
+
+
+
+
+
     .mainpage {
       border: 1px dotted #ffffff;
       min-width: 350px;
@@ -168,8 +228,22 @@
       <div class="page-switcher">
         <ul>
           <li><a href="#" data-page="Home">Home</a></li>
-          <li><a href="#" data-page="Portfolio">Portfolio</a></li>
-          <li><a href="#" data-page="Ressources">Ressources</a></li>
+        </ul>
+        <ul class="tree">
+          <li>
+            <details open>
+              <summary><a href="#" data-page="Portfolio">Portfolio</a></summary>
+              <ul>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details open>
+              <summary><a href="#" data-page="Ressources">Ressources</a></summary>
+              <ul>
+              </ul>
+            </details>
+          </li>
         </ul>
       </div>
     </div>
@@ -201,13 +275,39 @@
           });
       }
 
-      document.querySelectorAll('.page-switcher [data-page]').forEach(el => {
-        el.addEventListener('click', e => {
+      document.querySelector('.page-switcher').addEventListener('click', e => {
+        const link = e.target.closest('[data-page]');
+        if (link) {
           e.preventDefault();
-          loadPage(el.dataset.page);
-        });
+          loadPage(link.dataset.page);
+        }
       });
 
+      function buildTree() {
+        fetch('ressources.json')
+          .then(r => r.json())
+          .then(pages => {
+            for (const [page, items] of Object.entries(pages)) {
+              const summary = document.querySelector(`.page-switcher [data-page="${page}"]`);
+              if (!summary) continue;
+              const ul = summary.closest('details').querySelector('ul');
+              if (!ul) continue;
+              ul.innerHTML = '';
+              for (const item of items) {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#';
+                a.dataset.page = item.path;
+                a.textContent = item.name;
+                li.appendChild(a);
+                ul.appendChild(li);
+              }
+            }
+          })
+          .catch(() => {});
+      }
+
+      buildTree();
       loadPage('Home');
     }
   </script>
