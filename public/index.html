@@ -29,18 +29,17 @@
     .panel {
       display: flex;
       justify-content: center;
-      align-content: center;
+      align-content: flex-start;
       margin: 100px 100px 300px 100px;
     }
   
     .left-menu {
-      align-self: ;
       padding: 0 9px 0 0;
     }
 
     .profile-pic {
       border: 1px dotted #ffffff;
-      display: inline-block;
+      display: block;
     }
 
     .profile-pic pre {
@@ -226,9 +225,6 @@
 ⠀⠀⠀⠀⠀⠈⠉⠙⠛⠛⠛⠛⠛⠃⠘⠛⠛⠛⠛⠙⠫⠿⠿⠿⠿⠟⠻⠛⠛⠛⠛⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
       </div>
       <div class="page-switcher">
-        <ul>
-          <li><a href="#" data-page="Home">Home</a></li>
-        </ul>
         <ul class="tree">
           <li>
             <details open>
@@ -260,6 +256,8 @@
         'puis va sur <a href="http://localhost:8080">http://localhost:8080</a></p>';
     } else {
       const mainpage = document.querySelector('.mainpage');
+
+      marked.setOptions({ breaks: true, gfm: true });
 
       function loadPage(name) {
         fetch(name + '.md')
