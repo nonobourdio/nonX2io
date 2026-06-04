@@ -1,6 +1,6 @@
 ![miniature](https://i.imgur.com/ykkg52i.png)
 
-J’ai réalisé la 3D de cette vidéo : [La fin de ce jeu nous tuera tous - YouTube](https://youtu.be/ySebnw43OyE) En collaboration avec Fog (toute la 3D sauf l’iceberg qui a été faite par [Adam Onetake](https://www.instagram.com/adam_onetake/)).
+J’ai réalisé la 3D de cette vidéo : [La fin de ce jeu nous tuera tous - YouTube](https://youtu.be/ySebnw43OyE) En collaboration avec Fog (sauf l’iceberg qui a été fait par [Adam Onetake](https://www.instagram.com/adam_onetake/)).
 
 On avait un workflow où je mettais en place les scènes (modélisation, matériaux, compositing) et Fog cadrait la caméra comme ça s’est passé pour la scène du trou-noir ou sur la forêt.
 
