@@ -10,7 +10,7 @@ On avait un workflow où je mettais en place les scènes (modélisation, matéri
 
 ![foret](https://i.imgur.com/aQHewo2.png)
 
-Des fois on a changé, comme les scène où le pc vole dans l’espace, c’est Fog qui les a faites en entier
+Des fois on a changé, comme les scènes où le pc vole dans l’espace, c’est Fog qui les a faites en entier
 
 ![saturne](https://i.imgur.com/wqrQWxW.png)
 
