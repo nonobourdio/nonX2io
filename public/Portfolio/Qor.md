@@ -10,11 +10,17 @@ On avait un workflow où je mettais en place les scènes (modélisation, matéri
 
 ![foret](https://i.imgur.com/aQHewo2.png)
 
-Des fois on a changé, comme les scène où le pc vole dans l’espace vide, c’est Fog qui les a faites en entier
+Des fois on a changé, comme les scène où le pc vole dans l’espace, c’est Fog qui les a faites en entier
 
 ![saturne](https://i.imgur.com/wqrQWxW.png)
 
-Bon, j’arrête de parler.
+Et parfois j'ai du faire tout la scène, comme sur le moment où on est sur la POV de quelqu'un qui marche avec le pc dans les mains
+
+![pov1](https://i.imgur.com/uCI2aoD.png)
+
+![pov2rig](https://i.imgur.com/7QT3JfY.png)
+
+Bon, j’arrête de parler maintenant je vous met que des images.
 
 ![coccinnelle](https://i.imgur.com/MEwmu0Z.png)
 
