@@ -18,7 +18,7 @@ Bon, j’arrête de parler.
 
 ![coccinnelle](https://i.imgur.com/MEwmu0Z.png)
 
-![Laptop](https://i.imgur.com/oMNOCrf.png)
+![Laptop](https://i.imgur.com/Sdjy07s.png)
 
 ![fourmis2](https://i.imgur.com/uRmuoGL.png)
 
