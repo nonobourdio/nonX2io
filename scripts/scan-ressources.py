@@ -15,5 +15,5 @@ for entry in sorted(os.listdir(root)):
         if children:
             pages[entry] = children
 
-with open(os.path.join(root, 'ressources.json'), 'w') as fp:
+with open(os.path.join(root, 'tree-content.json'), 'w') as fp:
     json.dump(pages, fp, indent=2)

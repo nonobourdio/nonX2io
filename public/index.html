@@ -308,7 +308,7 @@
       });
 
       function buildTree() {
-        fetch('ressources.json')
+        fetch('tree-content.json')
           .then(r => r.json())
           .then(pages => {
             for (const [page, items] of Object.entries(pages)) {
