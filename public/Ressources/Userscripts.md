@@ -6,7 +6,9 @@ Le principe des **Userscripts** c’est de modifier un sîte pour enlever ou ajo
 
 Ces scripts sont vraiment hyper utiles et je pense que tout le monde devrait avoir la possibilitée de s’en servir car ils apportent des solutions à de nombreux problèmes trop “petits” pour mériter une extension mais qui peuvent grandement améliorer nos expériences dans l’utilisation de certains sîtes. C’est pourquoi je vous fais un guide très rapide sur l’utilisation des UserScript pour que vous puissiez vous aussi vous en servir.
 
+
 ---
+
 
 Pour utiliser des userscripts, il faut un **UserScript Manager**, qui est une extension de navigateur.
 La plupart des gens vous recommanderont **Tampermonkey** ([Chromium](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) [Firefox](https://addons.mozilla.org/fr/firefox/addon/tampermonkey/)) qui fonctionne bien, même si je vous recommande **Violentmonkey** ([Chromium](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag) [Firefox](https://addons.mozilla.org/fr/firefox/addon/violentmonkey/)), qui lui est Opensource.
@@ -26,7 +28,9 @@ Voilà, c’est installé. Comme vous avez pu le voir, c’est très facile d’
 
 Voici quelques scripts dont je me sers, et qui peuvent vous être utiles.
 
+
 ---
+
 
 [YouTube: Audio Only + Toggle Shortcut](https://greasyfork.org/en/scripts/581247-youtube-audio-only-toggle-shortcut) qui est une version modifiée de [YouTube: Audio Only](https://greasyfork.org/en/scripts/484611-youtube-audio-only) où j’ai ajouté le raccourcis alt + b pour le déclencher, plutôt que de devoir ouvrir plusieurs menu. Tout est dans le nom, ça permet de lire uniquement l’audio d’une vidéo YouTube.
 
