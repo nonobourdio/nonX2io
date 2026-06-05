@@ -1,4 +1,4 @@
-Le principe des **Userscripts** c’est de modifier, d’enlever, ou d’ajouter une fonctionnalité à un sîte internet, comme par exemple [ce scRIPT](HTTPS://Greasyfork.org/en/scripts/406535-instagram-download-button) qui ajoute un bouton **⤓** sous un contenu instagram (post ou reel) et qui le télécharge en .png ou .mp4 instantanemment après avoir appuyé dessus, ce qui est super utile si vous voulez utiliser un post comme image de référence par exemple.
+Le principe des **Userscripts** c’est de modifier un sîte pour enlever ou ajouter des éléments, comme par exemple [ce scRIPT](HTTPS://Greasyfork.org/en/scripts/406535-instagram-download-button) qui ajoute un bouton **⤓** sous un contenu instagram (post ou reel) et qui le télécharge en .png ou .mp4 instantanemment après avoir appuyé dessus, ce qui est super utile si vous voulez utiliser un post comme image de référence par exemple.
 
 ![instragram downloader](https://i.imgur.com/EUjpakR.png)
 
