@@ -41,4 +41,4 @@ De base on devait faire un désert mais on l’a abandonné en cours de prod. (d
 
 ![desert2](https://i.imgur.com/B6KrFaQ.png)
 
-C’était vraiment un super projet. J’ai adoré le faire, merci à Fog, merci à tous ceux qui ont fait des retours, merci à ceux qui ont regardé.
+C’était vraiment un super projet. J’ai adoré y participer. Merci à Fog, merci à tous ceux qui ont fait des retours avant qu'elle soit postée, merci à ceux qui ont regardé.
