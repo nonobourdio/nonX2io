@@ -4,8 +4,8 @@ Le but à terme c'est de faire un site sur lequel je pourrais vous partager des 
 
 
 Links :
-https://www.instagram.com/noobourdio/
-https://www.instagram.com/noobourdio/
+https://instagram.com/noobourdio/
+https://youtube.com/@nonobourdioo/
 https://mastodon.social/@nonobourdio
 
 
