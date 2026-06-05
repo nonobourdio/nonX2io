@@ -158,6 +158,15 @@
       line-height: 1.6;
     }
 
+    .mainpage-title {
+      font-family: 'Arial Black', Gadget, sans-serif;
+      font-size: 28px;
+      border-bottom: 1px dotted #555;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      color: #faedd4;
+    }
+
     .mainpage h1,
     .mainpage h2,
     .mainpage h3 {
@@ -249,19 +258,18 @@
       </div>
     </div>
     <div class="mainpage">
-      <br>
+      <div class="mainpage-title"></div>
+      <div class="mainpage-content"></div>
     </div>
   </div>
 
   <script>
     if (window.location.protocol === 'file:') {
-      document.querySelector('.mainpage').innerHTML =
+      document.querySelector('.mainpage-content').innerHTML =
         '<p style="color:#f88">Ouvre ce fichier avec un serveur HTTP local :<br>' +
         '<code style="color:#8ab4f8">python3 -m http.server 8080</code><br>' +
         'puis va sur <a href="http://localhost:8080">http://localhost:8080</a></p>';
     } else {
-      const mainpage = document.querySelector('.mainpage');
-
       marked.setOptions({ breaks: true, gfm: true });
 
       function loadPage(name) {
@@ -271,10 +279,23 @@
             return res.text();
           })
           .then(md => {
-            mainpage.innerHTML = marked.parse(md);
+            const html = marked.parse(md);
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const h1 = temp.querySelector('h1');
+            const titleEl = document.querySelector('.mainpage-title');
+            const contentEl = document.querySelector('.mainpage-content');
+            if (h1) {
+              titleEl.textContent = h1.textContent;
+              h1.remove();
+            } else {
+              titleEl.textContent = '';
+            }
+            contentEl.innerHTML = temp.innerHTML;
           })
           .catch(err => {
-            mainpage.innerHTML = `<p>Erreur : ${err.message}</p>`;
+            document.querySelector('.mainpage-title').textContent = '';
+            document.querySelector('.mainpage-content').innerHTML = `<p>Erreur : ${err.message}</p>`;
           });
       }
 
