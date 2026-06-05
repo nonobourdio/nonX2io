@@ -20,7 +20,8 @@ Et parfois j'ai du faire tout la scène, comme sur le moment où on est sur la P
 
 ![pov2rig](https://i.imgur.com/7QT3JfY.png)
 
-Bon, j’arrête de parler maintenant je vous met que des images.
+
+
 
 ![coccinnelle](https://i.imgur.com/MEwmu0Z.png)
 
