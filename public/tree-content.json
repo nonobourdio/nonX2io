@@ -7,16 +7,16 @@
   ],
   "Ressources": [
     {
+      "name": "Blender Cheatsheet",
+      "path": "Ressources/Blender Cheatsheet"
+    },
+    {
+      "name": "Le bazar",
+      "path": "Ressources/Le bazar"
+    },
+    {
       "name": "Userscripts",
       "path": "Ressources/Userscripts"
-    },
-    {
-      "name": "archives",
-      "path": "Ressources/archives"
-    },
-    {
-      "name": "tools",
-      "path": "Ressources/tools"
     }
   ]
 }
