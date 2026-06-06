@@ -130,28 +130,6 @@
       border-width: 0 0 2px 2px;
     }
 
-    .tree summary {
-      display: block;
-      cursor: pointer;
-    }
-
-    .tree summary::marker,
-    .tree summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .tree summary:focus {
-      outline: none;
-    }
-
-    .tree summary:focus-visible {
-      outline: 1px dotted #faedd4;
-    }
-
-
-
-
-
     .mainpage {
       border: 1px dotted #ffffff;
       min-width: 350px;
@@ -251,18 +229,14 @@
       <div class="page-switcher">
         <ul class="tree">
           <li>
-            <details open>
-              <summary><a href="#" data-page="Portfolio">Portfolio</a></summary>
-              <ul>
-              </ul>
-            </details>
+            <a href="#" data-page="Portfolio">Portfolio</a>
+            <ul>
+            </ul>
           </li>
           <li>
-            <details open>
-              <summary><a href="#" data-page="Ressources">Ressources</a></summary>
-              <ul>
-              </ul>
-            </details>
+            <a href="#" data-page="Ressources">Ressources</a>
+            <ul>
+            </ul>
           </li>
         </ul>
       </div>
@@ -322,9 +296,9 @@
           .then(r => r.json())
           .then(pages => {
             for (const [page, items] of Object.entries(pages)) {
-              const summary = document.querySelector(`.page-switcher [data-page="${page}"]`);
-              if (!summary) continue;
-              const ul = summary.closest('details').querySelector('ul');
+              const link = document.querySelector(`.page-switcher [data-page="${page}"]`);
+              if (!link) continue;
+              const ul = link.parentElement.querySelector('ul');
               if (!ul) continue;
               ul.innerHTML = '';
               for (const item of items) {
