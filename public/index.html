@@ -206,41 +206,34 @@
 
     ::-webkit-scrollbar {
       width: 16px;
-      height: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: #fff;
-      background-image: url(https://i.imgur.com/Qtm9Z60.png);
-      border-top: 1px solid #bdbdbd;
-      border-left: 1px solid #bdbdbd;
-      border-right: 1px solid black;
-      border-bottom: 1px solid black;
     }
 
     ::-webkit-scrollbar-track {
-      background-color: ##0d0d0e;
-      background-image: url(https://i.imgur.com/IGXGYKz.png);
+      background: #1a1a1c;
+      border: 1px solid #333;
     }
 
-    ::-webkit-scrollbar-button:vertical:increment {
-      background-image: url(https:#bdbdbd//i.imgur.com/WhC8iy3.png);
-      width: 14px;
-      height: 16px;
-      border-top: 1px solid #bdbdbd;
-      border-left: 1px solid #bdbdbd;
-      border-right: 1px solid black;
-      border-bottom: 1px solid black;
+    ::-webkit-scrollbar-thumb {
+      background:
+        repeating-linear-gradient(
+          180deg,
+          transparent 0 2px,
+          #555 2px 3px,
+          transparent 3px 4px
+        ),
+        #3a3a3c;
+      background-clip: padding-box;
+      border: 2px solid;
+      border-color: #666 #111 #111 #666;
+      min-height: 20px;
     }
 
-    ::-webkit-scrollbar-button:vertical:decrement {
-      background-image: url(https://i.imgur.com/fQ18mrR.png);
-      border-top: 1px solid #bdbdbd;
-      border-left: 1px solid #bdbdbd;
-      border-right: 1px solid black;
-      border-bottom: 1px solid black;
-      width: 14px;
-      height: 16px;
+    ::-webkit-scrollbar-thumb:vertical:active {
+      border-color: #111 #666 #666 #111;
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: #1a1a1c;
     }
   </style>
 </head>
