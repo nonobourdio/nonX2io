@@ -11,7 +11,7 @@ Ces scripts sont vraiment hyper utiles et je pense que tout le monde devrait avo
 
 
 Pour utiliser des userscripts, il faut un **UserScript Manager**, qui est une extension de navigateur.
-La plupart des gens vous recommanderont **Tampermonkey** ([Chromium](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) [Firefox](https://addons.mozilla.org/fr/firefox/addon/tampermonkey/)) qui fonctionne bien, même si je vous recommande **Violentmonkey** ([Chromium](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag) [Firefox](https://addons.mozilla.org/fr/firefox/addon/violentmonkey/)), qui lui est Opensource.
+La plupart des gens vous recommanderont **Tampermonkey** ([Chromium](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) // [Firefox](https://addons.mozilla.org/fr/firefox/addon/tampermonkey/)) qui fonctionne bien, même si je vous recommande **Violentmonkey** ([Chromium](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag) // [Firefox](https://addons.mozilla.org/fr/firefox/addon/violentmonkey/)), qui lui est Opensource.
 
 Pour trouver des userscripts, il faut aller sur https://greasyfork.org/en, puis simplement rechercher le script que vous voulez. Par exemple, le bouton de téléchargement sur Instagram :
 

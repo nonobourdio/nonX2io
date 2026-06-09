@@ -27,7 +27,7 @@ Répertorie plein de ressources gratuites
 ## DesireFX
 https://desirefx.me/
 
-Ressources de Monteur Vidéo // Artiste 3D // Graphiste
+Ressources de Monteur Vidéo / Artiste 3D / Graphiste
 
 ---
 
