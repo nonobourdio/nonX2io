@@ -10,5 +10,6 @@ Le but à terme c'est de faire un site sur lequel je pourrais vous partager des 
 
 ## Links :
 
-[![instagram](https://skillicons.dev/icons?i=instagram)](https://instagram.com/noobourdio/) [![mastodon](https://skillicons.dev/icons?i=mastodon)](https://mastodon.social/@nonobourdio)
+[![instagram](https://skillicons.dev/icons?i=instagram)](https://instagram.com/noobourdio/)  [![discord](https://skillicons.dev/icons?i=discord)](https://discord.com/users/nonobourdio) [![mastodon](https://skillicons.dev/icons?i=mastodon)](https://mastodon.social/@nonobourdio)
+
 
