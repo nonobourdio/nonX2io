@@ -292,6 +292,7 @@
               titleEl.textContent = '';
             }
             contentEl.innerHTML = temp.innerHTML;
+            contentEl.querySelectorAll('a').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
           })
           .catch(err => {
             document.querySelector('.mainpage-title').textContent = '';
