@@ -42,7 +42,7 @@
   
     .left-menu {
       padding: 0 9px 0 0;
-      max-width: 300px;
+      max-width: 250px;
     }
 
     .profile-pic {
@@ -288,9 +288,7 @@
   <script>
     if (window.location.protocol === 'file:') {
       document.querySelector('.mainpage-content').innerHTML =
-        '<p style="color:#f88">Ouvre ce fichier avec un serveur HTTP local :<br>' +
-        '<code style="color:#8ab4f8">python3 -m http.server 8080</code><br>' +
-        'puis va sur <a href="http://localhost:8080">http://localhost:8080</a></p>';
+        '<p style="color:#f88">python 3 scripts/scan-ressources.py</p>';
     } else {
       marked.setOptions({ breaks: true, gfm: true });
 
