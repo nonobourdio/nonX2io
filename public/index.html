@@ -42,7 +42,7 @@
   
     .left-menu {
       padding: 0 9px 0 0;
-      max-width: 250px;
+      max-width: 300px;
     }
 
     .profile-pic {
@@ -276,16 +276,6 @@
       </div>
       <div class="page-switcher">
         <ul class="tree">
-          <li>
-            <a href="#" data-page="Portfolio">Portfolio</a>
-            <ul>
-            </ul>
-          </li>
-          <li>
-            <a href="#" data-page="Ressources">Ressources</a>
-            <ul>
-            </ul>
-          </li>
         </ul>
       </div>
     </div>
@@ -340,25 +330,36 @@
         }
       });
 
+      function createItem(item) {
+        const li = document.createElement('li');
+        if (item.children) {
+          const el = document.createElement(item.path ? 'a' : 'span');
+          if (item.path) { el.href = '#'; el.dataset.page = item.path; }
+          el.textContent = item.name;
+          li.appendChild(el);
+          const ul = document.createElement('ul');
+          for (const child of item.children) {
+            ul.appendChild(createItem(child));
+          }
+          li.appendChild(ul);
+        } else {
+          const a = document.createElement('a');
+          a.href = '#';
+          a.dataset.page = item.path;
+          a.textContent = item.name;
+          li.appendChild(a);
+        }
+        return li;
+      }
+
       function buildTree() {
         fetch('tree-content.json')
           .then(r => r.json())
           .then(pages => {
-            for (const [page, items] of Object.entries(pages)) {
-              const link = document.querySelector(`.page-switcher [data-page="${page}"]`);
-              if (!link) continue;
-              const ul = link.parentElement.querySelector('ul');
-              if (!ul) continue;
-              ul.innerHTML = '';
-              for (const item of items) {
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                a.href = '#';
-                a.dataset.page = item.path;
-                a.textContent = item.name;
-                li.appendChild(a);
-                ul.appendChild(li);
-              }
+            const container = document.querySelector('.page-switcher .tree');
+            container.innerHTML = '';
+            for (const item of pages) {
+              container.appendChild(createItem(item));
             }
           })
           .catch(() => {});

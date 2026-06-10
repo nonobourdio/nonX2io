@@ -1,22 +1,43 @@
-{
-  "Portfolio": [
-    {
-      "name": "Qor",
-      "path": "Portfolio/Qor"
-    }
-  ],
-  "Ressources": [
-    {
-      "name": "Blender Cheatsheet",
-      "path": "Ressources/Blender Cheatsheet"
-    },
-    {
-      "name": "Le bazar",
-      "path": "Ressources/Le bazar"
-    },
-    {
-      "name": "Userscripts",
-      "path": "Ressources/Userscripts"
-    }
-  ]
-}
+[
+  {
+    "name": "Portfolio",
+    "children": [
+      {
+        "name": "Qor",
+        "path": "Portfolio/Qor"
+      }
+    ],
+    "path": "Portfolio"
+  },
+  {
+    "name": "Ressources",
+    "children": [
+      {
+        "name": "Blender Addons",
+        "path": "Ressources/Blender Addons"
+      },
+      {
+        "name": "Blender Cheatsheet",
+        "path": "Ressources/Blender Cheatsheet"
+      },
+      {
+        "name": "Le bazar",
+        "path": "Ressources/Le bazar"
+      },
+      {
+        "name": "Plugins",
+        "children": [
+          {
+            "name": "After-Effects",
+            "path": "Ressources/Plugins/After-Effects"
+          }
+        ]
+      },
+      {
+        "name": "Userscripts",
+        "path": "Ressources/Userscripts"
+      }
+    ],
+    "path": "Ressources"
+  }
+]
