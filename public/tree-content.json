@@ -20,12 +20,8 @@
         "name": "Extensions",
         "children": [
           {
-            "name": "AEffects Plugins",
-            "path": "Ressources/Extensions/AEffects Plugins"
-          },
-          {
-            "name": "Blender Addons",
-            "path": "Ressources/Extensions/Blender Addons"
+            "name": "Addons Blender",
+            "path": "Ressources/Extensions/Addons Blender"
           }
         ]
       },
