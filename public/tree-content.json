@@ -13,25 +13,25 @@
     "name": "Ressources",
     "children": [
       {
-        "name": "Blender Addons",
-        "path": "Ressources/Blender Addons"
-      },
-      {
         "name": "Blender Cheatsheet",
         "path": "Ressources/Blender Cheatsheet"
       },
       {
-        "name": "Le bazar",
-        "path": "Ressources/Le bazar"
-      },
-      {
-        "name": "Plugins",
+        "name": "Extensions",
         "children": [
           {
-            "name": "After-Effects",
-            "path": "Ressources/Plugins/After-Effects"
+            "name": "AEffects Plugins",
+            "path": "Ressources/Extensions/AEffects Plugins"
+          },
+          {
+            "name": "Blender Addons",
+            "path": "Ressources/Extensions/Blender Addons"
           }
         ]
+      },
+      {
+        "name": "Le bazar",
+        "path": "Ressources/Le bazar"
       },
       {
         "name": "Userscripts",
