@@ -179,7 +179,26 @@
 
     .mainpage ul, .mainpage ol { padding-left: 24px; }
 
-    .mainpage img { max-width: 100%; height: auto; }
+    .mainpage img { max-width: 100%; height: auto; cursor: pointer; }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      cursor: zoom-out;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 95vh;
+      border: 1px solid #333;
+    }
 
     .mainpage hr { border: none; border-top: 1px dotted #555; }
 
@@ -285,6 +304,8 @@
     </div>
   </div>
 
+  <div class="lightbox" id="lightbox"><img src="" alt=""></div>
+
   <script>
     if (window.location.protocol === 'file:') {
       document.querySelector('.mainpage-content').innerHTML =
@@ -313,6 +334,13 @@
             }
             contentEl.innerHTML = temp.innerHTML;
             contentEl.querySelectorAll('a').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
+            contentEl.querySelectorAll('img').forEach(img => {
+              img.addEventListener('click', () => {
+                const lb = document.getElementById('lightbox');
+                lb.querySelector('img').src = img.src;
+                lb.classList.add('open');
+              });
+            });
           })
           .catch(err => {
             document.querySelector('.mainpage-title').textContent = '';
@@ -365,6 +393,12 @@
 
       buildTree();
       loadPage('Home');
+
+      const lightbox = document.getElementById('lightbox');
+      lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') lightbox.classList.remove('open');
+      });
 
       const secret = 'harris';
       let buf = '';
