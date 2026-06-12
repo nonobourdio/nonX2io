@@ -335,6 +335,7 @@
             contentEl.innerHTML = temp.innerHTML;
             contentEl.querySelectorAll('a').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
             contentEl.querySelectorAll('img').forEach(img => {
+              if (img.src.endsWith('.svg') || img.closest('a')) return;
               img.addEventListener('click', () => {
                 const lb = document.getElementById('lightbox');
                 lb.querySelector('img').src = img.src;

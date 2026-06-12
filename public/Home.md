@@ -5,7 +5,7 @@ Le but à terme c'est de faire un site sur lequel je pourrais vous partager des 
 ---
 
 ## Mes outils :
-![My Tools](https://skillicons.dev/icons?i=blender,pr,ae,au,ps,neovim,obsidian,arch)
+[![blender](https://skillicons.dev/icons?i=blender)](https://blender.org) [![Pr](https://skillicons.dev/icons?i=pr)](https://www.adobe.com/products/premiere) [![aftereffects](https://skillicons.dev/icons?i=ae)](https://www.adobe.com/products/aftereffects) [![Au](https://skillicons.dev/icons?i=au)](https://www.adobe.com/products/audition) [![Ps](https://skillicons.dev/icons?i=ps)](https://www.adobe.com/products/photoshop) [![nvim](https://skillicons.dev/icons?i=neovim)](https://neovim.io/) [![obsidian](https://skillicons.dev/icons?i=obsidian)](https://obsidian.md/) [![arch](https://skillicons.dev/icons?i=arch)](https://archlinux.org/)
 
 
 ## Links :
