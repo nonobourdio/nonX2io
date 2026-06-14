@@ -44,4 +44,4 @@ Voici quelques scripts dont je me sers, et qui peuvent vous être utiles.
 
 [No Proton Mail promotions](https://greasyfork.org/en/scripts/499211-no-proton-mail-promotions) Pour ceux qui utilisent Proton, permet d’enlever les banderoles de promotions (que vous pouvez avoir même en tant qu’utilisateur payant)
 
-
+[Sketchfab downloader](https://greasyfork.org/en/scripts/492877-sketchfab) Si le modèle 3D vous est utile, soutenez quand même le créateur.
