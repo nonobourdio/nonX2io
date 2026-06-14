@@ -34,9 +34,9 @@ Voici quelques scripts dont je me sers, et qui peuvent vous être utiles.
 
 [YouTube: Audio Only + Toggle Shortcut](https://greasyfork.org/en/scripts/581247-youtube-audio-only-toggle-shortcut) qui est une version modifiée de [YouTube: Audio Only](https://greasyfork.org/en/scripts/484611-youtube-audio-only) où j’ai ajouté le raccourcis alt + b pour le déclencher, plutôt que de devoir ouvrir plusieurs menu. Tout est dans le nom, ça permet de lire uniquement l’audio d’une vidéo YouTube.
 
-[下载Notion页面 (Markdown)](https://greasyfork.org/en/scripts/539266-%E4%B8%8B%E8%BD%BDnotion%E9%A1%B5%E9%9D%A2-markdown) Permet de télécharger une page notion en fichier texte (.md)
+[下载Notion页面 (Markdown)](https://greasyfork.org/en/scripts/539266-%E4%B8%8B%E8%BD%BDnotion%E9%A1%B5%E9%9D%A2-markdown) Permet de télécharger une page notion en fichier markdown
 
-[Youtube Shorts to Traditional Video](https://greasyfork.org/en/scripts/479883-youtube-shorts-to-traditional-video) Redirige les pages YouTube shorts vers le lecteur traditionnel (en changeant le lien.
+[Youtube Shorts to Traditional Video](https://greasyfork.org/en/scripts/479883-youtube-shorts-to-traditional-video) Redirige les pages YouTube shorts vers le lecteur traditionnel en changeant le lien.
 
 [Reddit++](https://greasyfork.org/en/scripts/490046-reddit) Permet de modifier Reddit en enlevant les trucs innutiles (genre les jeux Reddit sur le côté)
 
