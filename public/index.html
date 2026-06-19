@@ -411,6 +411,16 @@
           new Audio('https://www.image2url.com/r2/default/audio/1781009311475-c5128284-7ede-45f2-b3da-2bdf6874b4fa.mp3').play();
         }
       });
+      const secret2 = 'sahdow';
+      let buf = '';
+      document.addEventListener('keydown', e => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+        buf = (buf + e.key.toLowerCase()).slice(-secret2.length);
+        if (buf === secret2) {
+          buf = '';
+          new Audio('https://www.image2url.com/r2/default/audio/1781009311475-c5128284-7ede-45f2-b3da-2bdf6874b4fa.mp3').play();
+        }
+      });
     }
   </script>
 </body>
