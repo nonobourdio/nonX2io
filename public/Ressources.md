@@ -1,3 +1,7 @@
+# Ressources
+
+Dans cette section, je vais partager des ressources qui me sont utiles dans mon process. Je ne sais pas quelle activité tu exerces toi qui lis ce texte en ce moment même, donc je te laisse fouiller, même si pour l'instant il n'y a pas grand chose à voir.
+
 # Disclamer
 ## Il faut obligatoirement l’extension Ublock avant de cliquer sur un lien
 
