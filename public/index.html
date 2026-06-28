@@ -363,15 +363,20 @@
         const link = e.target.closest('[data-page]');
         if (link) {
           e.preventDefault();
-          loadPage(link.dataset.page);
+          location.hash = link.dataset.page;
         }
+      });
+
+      window.addEventListener('hashchange', () => {
+        const page = location.hash.slice(1) || 'Home';
+        loadPage(page);
       });
 
       function createItem(item) {
         const li = document.createElement('li');
         if (item.children) {
           const el = document.createElement(item.path ? 'a' : 'span');
-          if (item.path) { el.href = '#'; el.dataset.page = item.path; }
+          if (item.path) { el.href = '#' + item.path; el.dataset.page = item.path; }
           el.textContent = item.name;
           li.appendChild(el);
           const ul = document.createElement('ul');
@@ -381,7 +386,7 @@
           li.appendChild(ul);
         } else {
           const a = document.createElement('a');
-          a.href = '#';
+          a.href = '#' + item.path;
           a.dataset.page = item.path;
           a.textContent = item.name;
           li.appendChild(a);
@@ -403,7 +408,8 @@
       }
 
       buildTree();
-      loadPage('Home');
+      const initialPage = location.hash.slice(1) || 'Home';
+      loadPage(initialPage);
 
       const lightbox = document.getElementById('lightbox');
       lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
