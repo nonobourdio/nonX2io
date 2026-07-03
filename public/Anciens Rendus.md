@@ -4,7 +4,8 @@ Je met ici des rendus un peu en bazar, que je veux mettre sur mon portfolio mais
 
 
 ### Entrainement animation de mains, 11 juillet 2025 :
-[video:https://i.imgur.com/Jgpc3x7.mp4]
+[https://i.imgur.com/Jgpc3x7.mp4]
+
 Rig fait manuellement pour m'entrainer aussi à setup cette partie là
 
 ### Character Design
