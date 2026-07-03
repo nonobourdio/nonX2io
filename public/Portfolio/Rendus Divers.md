@@ -14,7 +14,7 @@ Rig fait manuellement pour m'entrainer aussi à en créer
 
 Création du basemesh + rig + retopo + shaders et découverte du site https://connect.clo-set.com/
 
-## Concours Blender Community
+## Concours Blender Community, mai 2025 :
 ![concours](https://i.imgur.com/WtxJdre.png)
 
 Concours mensuel sur le serveur Discord de [Blender Community](https://discord.com/invite/blender)
