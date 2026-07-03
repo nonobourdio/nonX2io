@@ -355,7 +355,8 @@
             return res.text();
           })
           .then(md => {
-            md = md.replace(/\[video:([^\]]+)\]/g, '<video src="$1" controls class="site-player" preload="metadata"></video>');
+            md = md.replace(/\[video:([^\]]+)\]/g, '$1');
+            md = md.replace(/\[(https?:\/\/[^\]]+\.(mp4|webm|ogg))\]/gi, '$1');
             const html = marked.parse(md);
             const temp = document.createElement('div');
             temp.innerHTML = html;
@@ -370,6 +371,20 @@
             }
             contentEl.innerHTML = temp.innerHTML;
             contentEl.querySelectorAll('a').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
+            contentEl.querySelectorAll('a').forEach(a => {
+              if (/\.(mp4|webm|ogg)(\?|#|$)/i.test(a.href)) {
+                const video = document.createElement('video');
+                video.controls = true;
+                video.className = 'site-player';
+                video.preload = 'auto';
+                video.style.background = '#000';
+                fetch(a.href)
+                  .then(r => r.blob())
+                  .then(blob => { video.src = URL.createObjectURL(blob); })
+                  .catch(() => { video.src = a.href; });
+                a.replaceWith(video);
+              }
+            });
             contentEl.querySelectorAll('img').forEach(img => {
               if (img.src.endsWith('.svg') || img.closest('a')) return;
               img.addEventListener('click', () => {
