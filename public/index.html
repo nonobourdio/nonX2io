@@ -208,14 +208,13 @@
     .mainpage .site-player {
       max-width: 100%;
       border: 1px solid #555;
-      border-radius: 0;
       background: #000;
       display: block;
       margin: 16px 0;
     }
 
     .mainpage .site-player::-webkit-media-controls-panel {
-      background: linear-gradient(180deg, #1a1a1c, #0f1214);
+      background: linear-gradient(180deg, rgba(15,18,20,0), rgba(26,26,28,0));
       border-radius: 0;
     }
 
@@ -355,8 +354,8 @@
             return res.text();
           })
           .then(md => {
-            md = md.replace(/\[video:([^\]]+)\]/g, '$1');
-            md = md.replace(/\[(https?:\/\/[^\]]+\.(mp4|webm|ogg))\]/gi, '$1');
+            md = md.replace(/\[video:([^\]]+)\]/g, '<video src="$1" controls class="site-player"></video>');
+            md = md.replace(/\[(https?:\/\/[^\]]+\.(mp4|webm|ogg))\]/gi, '<video src="$1" controls class="site-player"></video>');
             const html = marked.parse(md);
             const temp = document.createElement('div');
             temp.innerHTML = html;
@@ -374,14 +373,9 @@
             contentEl.querySelectorAll('a').forEach(a => {
               if (/\.(mp4|webm|ogg)(\?|#|$)/i.test(a.href)) {
                 const video = document.createElement('video');
+                video.src = a.href;
                 video.controls = true;
                 video.className = 'site-player';
-                video.preload = 'auto';
-                video.style.background = '#000';
-                fetch(a.href)
-                  .then(r => r.blob())
-                  .then(blob => { video.src = URL.createObjectURL(blob); })
-                  .catch(() => { video.src = a.href; });
                 a.replaceWith(video);
               }
             });
