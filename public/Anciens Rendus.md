@@ -11,3 +11,10 @@ Rig fait manuellement pour m'entrainer aussi à setup cette partie là
 ![babouin_roux](https://i.imgur.com/fJdJ1Ob.png)
 ![vetements](https://i.imgur.com/bEV1fVz.png)
 ![shader](https://i.imgur.com/iZdjQPI.png)
+
+Création du basemesh + rig + retopo + shaders et découverte du site https://connect.clo-set.com/
+
+### Concours Blender Community
+![concours](https://i.imgur.com/WtxJdre.png)
+
+Concours mensuel sur le serveur Discord de [Blenedr Community](https://discord.com/invite/blender)
