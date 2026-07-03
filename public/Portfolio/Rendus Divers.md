@@ -16,7 +16,7 @@ Création du basemesh + rig + retopo + shaders et découverte du site https://co
 
 ## La Maison dans Celeste, octobre 2025 :
 J'ai refait la maison de la mamie dans Celeste
-![maison](https://i.imgur.com/zFP75lh.mp4)
+https://i.imgur.com/zFP75lh.mp4
 J'en ai fais un [post](https://www.instagram.com/p/DQR5cZWjPBO), allez voir si vous voulez plus de détails :)
 
 ## Concours Blender Community, mai 2025 :
