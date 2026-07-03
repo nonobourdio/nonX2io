@@ -3,12 +3,12 @@
     "name": "Portfolio",
     "children": [
       {
-        "name": "Anciens Rendus",
-        "path": "Portfolio/Anciens Rendus"
-      },
-      {
         "name": "Qor",
         "path": "Portfolio/Qor"
+      },
+      {
+        "name": "Rendus Divers",
+        "path": "Portfolio/Rendus Divers"
       }
     ],
     "path": "Portfolio"

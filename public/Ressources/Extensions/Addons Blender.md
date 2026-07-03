@@ -17,4 +17,4 @@ https://www.aeblender.com/tag/blender-stuff/
 ---
 
 ## Si un add-ons vous rend service, soutenez les dévelopeurs.
-Contrairement à un logiciel Adobe, ces add-ons sont souvent faits par des développeurs indépendants. Si l’un d’entre eux vous a rendu service ou vous a fait gagner du temps, payez-le et contribuez à la communauté Blender.
+Contrairement à un logiciel Adobe, ces add-ons sont souvent faits par des développeurs indépendants. Si l’un d’entre eux vous a rendu service ou vous a fait gagner du temps, payez-le et contribuez à son succès mérité.
