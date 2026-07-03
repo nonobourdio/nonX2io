@@ -354,9 +354,10 @@
             return res.text();
           })
           .then(md => {
-            md = md.replace(/\[video:([^\]]+)\]/g, '<video src="$1" controls class="site-player"></video>');
-            md = md.replace(/\[(https?:\/\/[^\]]+\.(mp4|webm|ogg))\]/gi, '<video src="$1" controls class="site-player"></video>');
-            const html = marked.parse(md);
+            const urls = [];
+            md = md.replace(/\[video:([^\]]+)\]/g, (_, url) => { urls.push(url); return `\x00V${urls.length-1}\x00`; });
+            md = md.replace(/\[(https?:\/\/[^\]]+\.(mp4|webm|ogg))\]/gi, (_, url) => { urls.push(url); return `\x00V${urls.length-1}\x00`; });
+            const html = marked.parse(md).replace(/\x00V(\d+)\x00/g, (_, i) => `<video src="${urls[i]}" controls class="site-player"></video>`);
             const temp = document.createElement('div');
             temp.innerHTML = html;
             const h1 = temp.querySelector('h1');
