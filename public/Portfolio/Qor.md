@@ -1,46 +1,46 @@
 # Qor
 
-![miniature](https://i.imgur.com/fNPVzI9.png)
+![miniature](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/miniature.webp)
 
 J’ai réalisé la 3D de cette vidéo : [La fin de ce jeu nous tuera tous - YouTube](https://youtu.be/ySebnw43OyE) En collaboration avec Fog (sauf l’iceberg qui a été fait par [Adam Onetake](https://www.instagram.com/adam_onetake/)).
 
 On avait un workflow où je mettais en place les scènes (modélisation, matériaux, compositing) et Fog cadrait la caméra comme ça s’est passé pour la scène du trou-noir ou sur la forêt.
 
-![trou noir](https://i.imgur.com/uxkRrKi.png)
+![trou noir](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/trou-noir.webp)
 
-![trounoir2](https://i.imgur.com/kUNoIdd.png)
+![trounoir2](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/trounoir2.webp)
 
-![foret](https://i.imgur.com/aQHewo2.png)
+![foret](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/foret.webp)
 
 Des fois on a changé, comme les scènes où le pc vole dans l’espace, c’est Fog qui les a faites en entières
 
-![saturne](https://i.imgur.com/wqrQWxW.png)
+![saturne](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/saturne.webp)
 
 Et parfois j'ai du faire tout la scène, comme sur le moment où on est sur la POV de quelqu'un qui marche avec le pc dans les mains
 
-![pov1](https://i.imgur.com/uCI2aoD.png)
+![pov1](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/pov1.webp)
 
-![pov2rig](https://i.imgur.com/7QT3JfY.png)
-
-
+![pov2rig](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/pov2rig.webp)
 
 
-![coccinnelle](https://i.imgur.com/MEwmu0Z.png)
 
-![Laptop](https://i.imgur.com/Sdjy07s.png)
 
-![fourmis2](https://i.imgur.com/uRmuoGL.png)
+![coccinnelle](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/coccinnelle.webp)
 
-![2ecoccinnelle](https://i.imgur.com/vcpozRI.png)
+![Laptop](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/laptop.webp)
 
-![wide](https://i.imgur.com/ALQNzFB.png)
+![fourmis2](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/fourmis2.webp)
 
-![vueduhaut](https://i.imgur.com/dsXa8AN.jpeg)
+![2ecoccinnelle](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/2ecoccinnelle.webp)
+
+![wide](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/wide.webp)
+
+![vueduhaut](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/vueduhaut.webp)
 
 De base on devait faire un désert mais on l’a abandonné en cours de prod. (du coup vous avez des exclus)
 
-![desert](https://i.imgur.com/owrW2R1.jpeg)
+![desert](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/desert.webp)
 
-![desert2](https://i.imgur.com/B6KrFaQ.png)
+![desert2](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/desert2.webp)
 
 C’était vraiment un super projet. J’ai adoré y participer. Merci à Fog, merci à tous ceux qui ont fait des retours avant qu'elle soit postée, merci à ceux qui ont regardé.

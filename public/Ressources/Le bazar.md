@@ -7,11 +7,11 @@ C’est un grand tableau qui rassemble plein de sîtes internet plus ou moins ut
 
 Le lien mène vers cette page
 
-![mirroirs](https://i.imgur.com/6sNOpqV.png)
+![mirroirs](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/mirroirs.webp)
 
 Faut juste en sélectionner un.
 
-![onglets](https://i.imgur.com/WUgvnwh.png)
+![onglets](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/onglets.webp)
 
 Vous avez des onglets en bas pour naviguer entre les catégories.
 

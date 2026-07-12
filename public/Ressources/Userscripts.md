@@ -2,7 +2,7 @@
 
 Le principe des **Userscripts** c’est de modifier un sîte pour enlever ou ajouter des éléments, comme par exemple [ce script](HTTPS://Greasyfork.org/en/scripts/406535-instagram-download-button) qui ajoute un bouton **⤓** sous un contenu instagram (post ou reel) et qui le télécharge en .png ou .mp4 instantanemment après avoir appuyé dessus, ce qui est super utile si vous voulez utiliser un post comme image de référence par exemple.
 
-![instragram downloader](https://i.imgur.com/EUjpakR.png)
+![instragram downloader](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/instragram-downloader.webp)
 
 Ces scripts sont vraiment hyper utiles et je pense que tout le monde devrait avoir la possibilitée de s’en servir car ils apportent des solutions à de nombreux problèmes trop “petits” pour mériter une extension mais qui peuvent grandement améliorer nos expériences dans l’utilisation de certains sîtes. C’est pourquoi je vous fais un guide très rapide sur l’utilisation des UserScript pour que vous puissiez vous aussi vous en servir.
 
@@ -15,14 +15,14 @@ La plupart des gens vous recommanderont **Tampermonkey** ([Chromium](https://chr
 
 Pour trouver des userscripts, il faut aller sur https://greasyfork.org/en, puis simplement rechercher le script que vous voulez. Par exemple, le bouton de téléchargement sur Instagram :
 
-![greasy fork research](https://i.imgur.com/vo5E4m6.png)
+![greasy fork research](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/greasy-fork-research.webp)
 
 Ensuite vous devrez sélectionner celui que vous voulez, puis simplement cliquer sur installer.
-![script_install_page](https://i.imgur.com/1LBdsc5.png)
+![script_install_page](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/script-install-page.webp)
 
 Ça vous ouvrira automatiquement la page d’installation sur votre UserScript manager.
 
-![violentmonkey_script_install](https://i.imgur.com/vvtRzW2.png)
+![violentmonkey_script_install](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/violentmonkey-script-install.webp)
 
 Voilà, c’est installé. Comme vous avez pu le voir, c’est très facile d’accès. Je vous partage ça ici parce que trouve dommage de ne pas en entendre plus parler et je pense que ça peut vraiment être utile à n’importe quel type de personne.
 

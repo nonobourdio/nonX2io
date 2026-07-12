@@ -9,8 +9,8 @@ https://i.imgur.com/Jgpc3x7.mp4
 Rig fait manuellement pour m'entrainer aussi à en créer
 
 ## Character Design, Aout 2025 :
-![babouin_roux](https://i.imgur.com/fJdJ1Ob.png)
-![shader](https://i.imgur.com/n62ZkJl.png)
+![babouin_roux](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/babouin-roux.webp)
+![shader](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/shader.webp)
 
 Création du basemesh + rig + retopo + shaders et découverte du site https://connect.clo-set.com/
 
@@ -20,6 +20,6 @@ https://i.imgur.com/zFP75lh.mp4
 J'en ai fais un [post](https://www.instagram.com/p/DQR5cZWjPBO), allez voir si vous voulez plus de détails :)
 
 ## Concours Blender Community, mai 2025 :
-![concours](https://i.imgur.com/WtxJdre.png)
+![concours](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/concours.webp)
 
 Concours mensuel sur le serveur Discord de [Blender Community](https://discord.com/invite/blender)
