@@ -1,4 +1,4 @@
-# Add-ons Blender
+# Addons Blender
 
 Les sites officiels pour avoir des add-ons Blender sont :
 https://superhivemarket.com/
