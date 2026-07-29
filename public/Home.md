@@ -2,6 +2,8 @@
 Site en développement, pour l'instant c'est pas fameux mais j'y travaille.
 Le but à terme c'est de faire un site sur lequel je pourrais vous partager des ressources utiles pour les 3D artist, monteurs et prestataires en général, ainsi que d'avoir un portfolio bien organisé.
 
+C'est possible que vous tombiez sur des pages vides, c'est que c'est un peu le chantier pour l'instant.
+
 ---
 
 ## Mes outils :
