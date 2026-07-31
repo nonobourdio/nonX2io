@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/Portfolio/Perso/Rendus BioxelNodes.md",
+                "file": "public/Ressources/Blender Cheatsheet.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Rendus BioxelNodes"
+              "title": "Blender Cheatsheet"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "public/Portfolio/Perso/Rendus BioxelNodes.md",
+                "file": "public/Ressources/Blender Cheatsheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,13 +190,13 @@
   },
   "active": "aa243d93831cfde4",
   "lastOpenFiles": [
+    "public/Portfolio/Perso/Rendus BioxelNodes.md",
     "images/Cheatsheet/vector_cheatsheet.PNG",
     "images/Cheatsheet/VectorConversionSheet_v2_PitchedDA.PNG",
     "images/Cheatsheet",
     "images/Nouveau dossier",
     "Personal notes.md",
     "public/_verify_split.md",
-    "public/Portfolio/Perso/Rendus BioxelNodes.md",
     "images/Bioxel/schema.png",
     "The past and now -LEASE-.m4a",
     "public/_verify_gallery.md",
@@ -208,7 +208,6 @@
     "images/Bioxel/bioxel3compositing.png",
     "images/Bioxel/bioxel6screenshot.png",
     "images/Bioxel/bioxel4screenshot.png",
-    "images/Bioxel/bioxel1screenshot.png",
     "public/Portfolio/Perso/Rendus Divers.md",
     "IDEA.md",
     "_test_gallery.py",
