@@ -6,7 +6,5 @@ C'est les rendus que je fais sur mon temps libre avec l'addon [Bioxel Nodes](htt
 
 
 
-!\[https://github.com/nonobourdio/nonX2io/blob/main/images/Bioxel/bioxel1render.png](finwhale1)
-
-
+!\[finwhale1](https://github.com/nonobourdio/nonX2io/blob/main/images/Bioxel/bioxel1render.png)
 
