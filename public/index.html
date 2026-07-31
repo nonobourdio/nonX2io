@@ -190,6 +190,21 @@
       height: auto;
     }
 
+    .mainpage .split-row {
+      display: flex;
+      gap: 16px;
+      margin: 16px 0;
+      align-items: center;
+    }
+
+    .mainpage .split-cell {
+      flex: 1 1 50%;
+      min-width: 0;
+      width: 50%;
+    }
+
+    .mainpage .split-cell img { max-width: 100%; height: auto; }
+
     .lightbox {
       display: none;
       position: fixed;
@@ -285,6 +300,14 @@
         max-height: none !important;
         width: 100%;
       }
+
+      .mainpage .split-row {
+        flex-direction: column;
+      }
+
+      .mainpage .split-cell {
+        width: 100%;
+      }
     }
 
     ::-webkit-scrollbar {
@@ -368,6 +391,11 @@
                 return '<img src="' + m[2] + '" alt="' + m[1] + '">';
               });
               return '<div class="image-row">' + tags.join('') + '</div>';
+            });
+            md = md.replace(/\[split\]([\s\S]*?)\[\/split\]/gi, function(match, content) {
+              var parts = content.split(/\n\s*---\s*\n/).map(function(s) { return s.trim(); }).filter(Boolean);
+              if (parts.length < 2) return match;
+              return '<div class="split-row"><div class="split-cell">' + marked.parse(parts[0]) + '</div><div class="split-cell">' + marked.parse(parts[1]) + '</div></div>';
             });
             const html = marked.parse(md);
             const temp = document.createElement('div');
