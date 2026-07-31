@@ -179,13 +179,14 @@
       display: flex;
       gap: 10px;
       margin: 16px 0;
-      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
     }
 
     .mainpage .image-row img {
-      flex: 1 1 0;
+      flex: 0 1 auto;
       min-width: 0;
-      width: 100%;
+      max-width: 100%;
       height: auto;
     }
 
@@ -278,6 +279,11 @@
 
       .mainpage .image-row {
         flex-direction: column;
+      }
+
+      .mainpage .image-row img {
+        max-height: none !important;
+        width: 100%;
       }
     }
 
@@ -393,6 +399,17 @@
                 lb.querySelector('img').src = img.src;
                 lb.classList.add('open');
               });
+            });
+
+            contentEl.querySelectorAll('.image-row').forEach(row => {
+              const imgs = Array.from(row.querySelectorAll('img'));
+              const apply = () => {
+                const ready = imgs.filter(i => i.complete && i.naturalWidth > 0);
+                if (ready.length !== imgs.length) return;
+                const minH = Math.min(...imgs.map(i => i.naturalHeight));
+                if (minH > 0) imgs.forEach(i => i.style.maxHeight = minH + 'px');
+              };
+              imgs.forEach(i => { if (i.complete) apply(); else i.addEventListener('load', apply); });
             });
           })
           .catch(err => {
