@@ -74,13 +74,14 @@
       color: #e6e2d6;
       font-family: 'IBM BIOS';
       font-weight: 400;
-      padding: 4px 0;
       cursor: pointer;
     }
 
     .page-switcher li a {
       color: #e6e2d6;
       text-decoration: none;
+      display: block;
+      padding: 4px 8px;
     }
 
     .page-switcher li a:hover {
@@ -123,6 +124,26 @@
       height: calc(var(--spacing) + 1px);
       border: solid #555;
       border-width: 0 0 2px 2px;
+    }
+
+    .tree li.collapsed > ul { display: none; }
+
+    .tree .toggle {
+      cursor: pointer;
+      display: inline-block;
+      width: 14px;
+      padding: 0 6px;
+      text-align: center;
+      user-select: none;
+      margin-right: 2px;
+      color: #e6e2d6;
+    }
+    .tree .toggle::before { content: '-'; }
+    .tree li.collapsed > .toggle::before { content: '+'; }
+    .tree .toggle-spacer {
+      display: inline-block;
+      width: 14px;
+      margin-right: 2px;
     }
 
     .mainpage {
@@ -447,6 +468,11 @@
       }
 
       document.querySelector('.page-switcher').addEventListener('click', e => {
+        const toggle = e.target.closest('.toggle');
+        if (toggle) {
+          toggle.closest('li').classList.toggle('collapsed');
+          return;
+        }
         const link = e.target.closest('[data-page]');
         if (link) {
           e.preventDefault();
@@ -462,6 +488,9 @@
       function createItem(item) {
         const li = document.createElement('li');
         if (item.children) {
+          const toggle = document.createElement('span');
+          toggle.className = 'toggle';
+          li.appendChild(toggle);
           const el = document.createElement(item.path ? 'a' : 'span');
           if (item.path) { el.href = '#' + item.path; el.dataset.page = item.path; }
           el.textContent = item.name;
@@ -472,6 +501,9 @@
           }
           li.appendChild(ul);
         } else {
+          const spacer = document.createElement('span');
+          spacer.className = 'toggle-spacer';
+          li.appendChild(spacer);
           const a = document.createElement('a');
           a.href = '#' + item.path;
           a.dataset.page = item.path;

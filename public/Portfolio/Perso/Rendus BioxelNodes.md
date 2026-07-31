@@ -2,6 +2,7 @@
 
 C'est les rendus que je fais sur mon temps libre avec l'addon [Bioxel Nodes](https://extensions.blender.org/add-ons/bioxelnodes/)
 
+---
 [split]
 L'objectif de l'addon c'est de permettre à Blender d'interpretter de l'imagerie médicale et d'en faire un volume en 3D.
 
