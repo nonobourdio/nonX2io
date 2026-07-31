@@ -4,3 +4,7 @@ C'est les rendus que je fais sur mon temps libre avec l'addon [Bioxel Nodes](htt
 
 ## 1 - "Fin Whale"
 ![bioxel1](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel1render.png)
+
+![bioxel2](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel2render.png)
+
+![bioxel3]()

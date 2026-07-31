@@ -3,12 +3,21 @@
     "name": "Portfolio",
     "children": [
       {
-        "name": "Qor",
-        "path": "Portfolio/Qor"
+        "name": "Perso",
+        "children": [
+          {
+            "name": "Rendus Bioxel-Nodes",
+            "path": "Portfolio/Perso/Rendus Bioxel-Nodes"
+          },
+          {
+            "name": "Rendus Divers",
+            "path": "Portfolio/Perso/Rendus Divers"
+          }
+        ]
       },
       {
-        "name": "Rendus Divers",
-        "path": "Portfolio/Rendus Divers"
+        "name": "Qor",
+        "path": "Portfolio/Qor"
       }
     ],
     "path": "Portfolio"
@@ -26,6 +35,10 @@
           {
             "name": "Addons Blender",
             "path": "Ressources/Extensions/Addons Blender"
+          },
+          {
+            "name": "Mes Addons",
+            "path": "Ressources/Extensions/Mes Addons"
           }
         ]
       },

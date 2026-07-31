@@ -175,6 +175,20 @@
 
     .mainpage img { max-width: 100%; height: auto; cursor: pointer; }
 
+    .mainpage .image-row {
+      display: flex;
+      gap: 10px;
+      margin: 16px 0;
+      align-items: flex-start;
+    }
+
+    .mainpage .image-row img {
+      flex: 1 1 0;
+      min-width: 0;
+      width: 100%;
+      height: auto;
+    }
+
     .lightbox {
       display: none;
       position: fixed;
@@ -261,6 +275,10 @@
         max-width: 100%;
         min-width: 0;
       }
+
+      .mainpage .image-row {
+        flex-direction: column;
+      }
     }
 
     ::-webkit-scrollbar {
@@ -336,6 +354,15 @@
             md = md.replace(/\[video:([^\]]+)\]/g, '$1');
             md = md.replace(/\[(https?:\/\/[^\]]+\.(mp4|webm|ogg))\]/gi, '$1');
             md = md.replace(/\[vimeo:([^\]]+)\]/g, '<div class="site-video"><iframe src="https://player.vimeo.com/video/$1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>');
+            md = md.replace(/\[gallery\]([\s\S]*?)\[\/gallery\]/gi, function(match, content) {
+              var imgs = content.match(/!\[([^\]]*)\]\(([^)]+)\)/g);
+              if (!imgs) return match;
+              var tags = imgs.map(function(s) {
+                var m = s.match(/!\[([^\]]*)\]\(([^)]+)\)/);
+                return '<img src="' + m[2] + '" alt="' + m[1] + '">';
+              });
+              return '<div class="image-row">' + tags.join('') + '</div>';
+            });
             const html = marked.parse(md);
             const temp = document.createElement('div');
             temp.innerHTML = html;
