@@ -1,4 +1,4 @@
-# Rendus Bioxel-Nodes
+# Rendus BioxelNodes
 
 C'est les rendus que je fais sur mon temps libre avec l'addon [Bioxel Nodes](https://extensions.blender.org/add-ons/bioxelnodes/)
 
@@ -21,3 +21,18 @@ C'est les rendus que je fais sur mon temps libre avec l'addon [Bioxel Nodes](htt
 [/gallery]
 
 ![bioxel3render](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel3render.png)
+
+# 4
+[gallery]
+![bioxel4render](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel4render.png)
+![bioxel4screenshot](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel4screenshot.png)
+[/gallery]
+
+# 6
+(j'ai jamais fini le 5...)
+[gallery]
+![bioxel6render](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel6render.png)
+![bioxel6screenshot](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel6screenshot.png)
+[/gallery]
+
+![bioxel6compositing](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel6compositing.png)
