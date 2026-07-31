@@ -3,7 +3,10 @@
 C'est les rendus que je fais sur mon temps libre avec l'addon [Bioxel Nodes](https://extensions.blender.org/add-ons/bioxelnodes/)
 
 ## 1 - "Fin Whale"
+[gallery]
 ![bioxel1](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel1render.png)
+![bioxel1screenshot](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel1screenshot.png)
+
 
 ![bioxel2](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel2render.png)
 
