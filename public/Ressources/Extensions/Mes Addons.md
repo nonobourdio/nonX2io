@@ -1,5 +1,9 @@
 # Mes addons
-[button] link=https://mega.nz/folder/AMBzSIwK#PFTghzZxYwBtwfwPrkqkBA content="Télécharger" color=##2d3434 [/button]
+[button]
+link=https://mega.nz/folder/AMBzSIwK#PFTghzZxYwBtwfwPrkqkBA
+content="Télécharger"
+color=#2d3434
+[/button]
 
 
 ## Animation / Rigging
