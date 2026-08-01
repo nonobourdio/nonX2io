@@ -2,10 +2,10 @@
 [button]
 link=https://mega.nz/folder/AMBzSIwK#PFTghzZxYwBtwfwPrkqkBA
 content="Télécharger"
-color=#2d3434
+color=#e6e2d6
 [/button]
 
-
+Ils sont tous téléchargeables sur le lien Mega juste en haut, mais achetez les pour soutenir les devs s'ils vous sont utiles
 ## Animation / Rigging
 - Auto-Rig_Pro_v3.75.55
 - Add_Camera_Rigs_v1.8.1

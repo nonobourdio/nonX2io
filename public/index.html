@@ -455,7 +455,7 @@
               var color = (content.match(/color\s*=\s*(.+)$/im) || [])[1] || '#e6e2d6';
               color = color.trim();
               if (!link) return '';
-              return '<a class="title-button" href="' + link + '" style="background-color:' + color + '">' + btnContent + '</a>';
+              return '<a class="title-button" href="' + link + '" target="_blank" rel="noopener noreferrer" style="background-color:' + color + '">' + btnContent + '</a>';
             });
             const html = marked.parse(md);
             const temp = document.createElement('div');
