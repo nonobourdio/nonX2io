@@ -9,8 +9,10 @@ https://i.imgur.com/Jgpc3x7.mp4
 Rig fait manuellement pour m'entrainer aussi à en créer
 
 ## Character Design, Aout 2025 :
+[gallery]
 ![babouin_roux](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/babouin-roux.webp)
 ![shader](https://raw.githubusercontent.com/nonobourdio/nonX2io/main/images/shader.webp)
+[/gallery]
 
 Création du basemesh + rig + retopo + shaders et découverte du site https://connect.clo-set.com/
 
