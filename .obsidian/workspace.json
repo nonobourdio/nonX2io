@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/Ressources/Blender Cheatsheet.md",
+                "file": "public/Portfolio/Perso/Granny's House.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Blender Cheatsheet"
+              "title": "Granny's House"
             }
           }
         ]
@@ -190,15 +190,17 @@
   },
   "active": "aa243d93831cfde4",
   "lastOpenFiles": [
+    "Personal notes.md",
+    "The past and now -LEASE-.m4a",
+    "public/Portfolio/Perso/Granny's House.md",
+    "public/Ressources/Blender Cheatsheet.md",
     "public/Portfolio/Perso/Rendus BioxelNodes.md",
     "images/Cheatsheet/vector_cheatsheet.PNG",
     "images/Cheatsheet/VectorConversionSheet_v2_PitchedDA.PNG",
     "images/Cheatsheet",
     "images/Nouveau dossier",
-    "Personal notes.md",
     "public/_verify_split.md",
     "images/Bioxel/schema.png",
-    "The past and now -LEASE-.m4a",
     "public/_verify_gallery.md",
     "images/Bioxel/bioxel3screenshot.png",
     "images/Bioxel/bioxel2screenshot.png",
