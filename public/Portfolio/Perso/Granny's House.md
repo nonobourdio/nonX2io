@@ -1,4 +1,4 @@
-# Granny's House dans Celeste
+# Granny's House - Celeste
 https://i.imgur.com/zFP75lh.mp4
 ![viewport](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Celeste/overall.png)
 

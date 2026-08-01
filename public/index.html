@@ -175,6 +175,26 @@
       padding-bottom: 16px;
       margin-bottom: 16px;
       color: #e6e2d6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .mainpage-title .title-button {
+      font-family: 'IBM BIOS';
+      font-size: 16px;
+      color: #0f1214;
+      padding: 6px 16px;
+      text-decoration: none;
+      border: 2px solid #555;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .mainpage-title .title-button:hover {
+      opacity: 0.8;
     }
 
     .mainpage h1 {
@@ -428,6 +448,15 @@
               if (parts.length < 2) return match;
               return '<div class="split-row"><div class="split-cell">' + marked.parse(parts[0]) + '</div><div class="split-cell">' + marked.parse(parts[1]) + '</div></div>';
             });
+            md = md.replace(/\[button\]([\s\S]*?)\[\/button\]/gi, function(match, content) {
+              var link = (content.match(/link\s*=\s*(.+)/i) || [])[1] || '';
+              link = link.trim();
+              var btnContent = (content.match(/content\s*=\s*["'](.+?)["']/i) || [])[1] || '';
+              var color = (content.match(/color\s*=\s*(.+)$/im) || [])[1] || '#e6e2d6';
+              color = color.trim();
+              if (!link) return '';
+              return '<a class="title-button" href="' + link + '" style="background-color:' + color + '">' + btnContent + '</a>';
+            });
             const html = marked.parse(md);
             const temp = document.createElement('div');
             temp.innerHTML = html;
@@ -440,7 +469,10 @@
             } else {
               titleEl.textContent = '';
             }
+            const btn = temp.querySelector('.title-button');
+            if (btn) btn.remove();
             contentEl.innerHTML = temp.innerHTML;
+            if (btn) titleEl.appendChild(btn);
             contentEl.querySelectorAll('a').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
             contentEl.querySelectorAll('a').forEach(a => {
               if (/\.(mp4|webm|ogg)(\?|#|$)/i.test(a.href)) {

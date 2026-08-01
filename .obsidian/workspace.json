@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/Portfolio/Perso/Granny's House.md",
+                "file": "public/Ressources/Extensions/Mes Addons.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Granny's House"
+              "title": "Mes Addons"
             }
           }
         ]
@@ -190,8 +190,9 @@
   },
   "active": "aa243d93831cfde4",
   "lastOpenFiles": [
-    "public/Portfolio/Perso/Rendus Divers.md",
     "public/Portfolio/Perso/Granny's House.md",
+    "public/_verify_button.md",
+    "public/Portfolio/Perso/Rendus Divers.md",
     "Personal notes.md",
     "The past and now -LEASE-.m4a",
     "public/Ressources/Blender Cheatsheet.md",
