@@ -15,7 +15,7 @@
               "state": {
                 "file": "public/Portfolio/Perso/Granny's House.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Granny's House"
@@ -190,9 +190,10 @@
   },
   "active": "aa243d93831cfde4",
   "lastOpenFiles": [
+    "public/Portfolio/Perso/Rendus Divers.md",
+    "public/Portfolio/Perso/Granny's House.md",
     "Personal notes.md",
     "The past and now -LEASE-.m4a",
-    "public/Portfolio/Perso/Granny's House.md",
     "public/Ressources/Blender Cheatsheet.md",
     "public/Portfolio/Perso/Rendus BioxelNodes.md",
     "images/Cheatsheet/vector_cheatsheet.PNG",
@@ -210,7 +211,6 @@
     "images/Bioxel/bioxel3compositing.png",
     "images/Bioxel/bioxel6screenshot.png",
     "images/Bioxel/bioxel4screenshot.png",
-    "public/Portfolio/Perso/Rendus Divers.md",
     "IDEA.md",
     "_test_gallery.py",
     "public/GalleryTest.md",
