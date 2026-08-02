@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/Ressources/Le bazar.md",
+                "file": "public/Ressources/Textures.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Le bazar"
+              "title": "Textures"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -188,11 +190,18 @@
   },
   "active": "aa243d93831cfde4",
   "lastOpenFiles": [
-    "public/Ressources/Userscripts.md",
-    "public/Portfolio/currentfolder.md",
     "public/Ressources/Modèles 3D.md",
-    "public/Test Table.md",
+    "public/Ressources/Textures.md",
     "public/Ressources/Le bazar.md",
+    "public/Ressources/Untitled",
+    "public/Ressources/Extensions/Mes Addons.md",
+    "public/media/profile.png",
+    "public/media/bg-dither.png",
+    "public/Ressources/currentfolder.md",
+    "public/Ressources/Addons Blender/Mes Addons.md",
+    "public/Ressources/Addons Blender/currentfolder.md",
+    "public/Ressources/Addons Blender",
+    "public/Portfolio/currentfolder.md",
     "public/_verify_button.md",
     "public/Portfolio/Perso/Granny's House.md",
     "public/Portfolio/Perso/Rendus Divers.md",
@@ -213,14 +222,11 @@
     "bioxel1render.png.url",
     "images/Bioxel/bioxel6compositing.png",
     "images/Bioxel/bioxel3compositing.png",
-    "images/Bioxel/bioxel6screenshot.png",
-    "images/Bioxel/bioxel4screenshot.png",
     "IDEA.md",
     "_test_gallery.py",
     "public/GalleryTest.md",
     "public/Portfolio/Qor.md",
     "f.md",
-    "public/Ressources/Extensions/Mes Addons.md",
     "public/Ressources/Extensions/Addons Blender.md"
   ]
 }

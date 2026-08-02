@@ -3,7 +3,6 @@ Les modèles 3D c'est long à trouver, dès qu'on veut quelque chose de gratuit 
 
 [table]
 header=Site | Avis
-colwidth=3 | 3
 [SketchFab](https://sketchfab.com/) | Le plus connu, mais c'est loin d'être le meilleur
 [Open3DLab](https://open3dlab.com/) | Mon site préféré, contenu de très haute qualité et totalement gratuit
 [GFXhub](https://gfx-hub.co/3d-models/) | Très très bon
@@ -11,4 +10,9 @@ colwidth=3 | 3
 [3DModel.org](https://3d-model.org/) | Top, mais le contenu est un peu vieillissant, et beaucoup sont compatibles uniquement avec 3DSMAX
 [CGDownload](https://cgdownload.net/)| Très pratique, il faut juste avoir un traducteur russe
 [DesireFX](https://www.desirefx.com/) | Vraiment boosté + Ressource design
+[PolyPizza](https://poly.pizza/) | Modèles low poly
+[PolyHaven](https://polyhaven.com/all) | Pas totalement gratuit mais très qualitatif
+[AMD GPUOpen](https://matlib.gpuopen.com) | Classique
+[BlendSwap](https://blendswap.com/) | Très bon, dédié à Blender. MAIS limité à 5 téléchargement / j.
+[RawCatalog](https://rawcatalog.com/) |
 [/table]
