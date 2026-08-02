@@ -24,37 +24,25 @@
       isolation: isolate;
     }
 
-    /* Faint radial brightening toward the content area, almost
-       imperceptible — only there to keep the flat #0f1214 from
-       feeling like a void on large screens. */
+    /* Faint radial brightening toward the content area, genuinely
+       dithered with an 8x8 Bayer matrix (algorithm from
+       hbldh/hitherdither, ref: http://caca.zoy.org/study/part2.html):
+       the transition between the two colors is made of the ordered
+       dithering pattern, not a smooth gradient. Tile is 540x540 and
+       seamless (its whole perimeter is the edge color), so cover
+       fills any viewport without visible seams. */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
       z-index: -2;
-      background: radial-gradient(
-        ellipse 80% 60% at 50% 35%,
-        #191e22 0%,
-        #0f1214 100%
-      );
-      pointer-events: none;
-    }
-
-    /* Ordered dithering overlay: a repeating 4x4 Bayer-style dot
-       pattern (white pixels on a fixed grid) blended at very low
-       opacity. Reads as CRT/tramway texture rather than a flat fill,
-       but stays almost invisible against #0f1214. background-size
-       doubles the tile so the dots read as visibly pixelated. */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      opacity: 0.01;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' shape-rendering='crispEdges'%3E%3Crect width='4' height='4' fill='%230f1214' fill-opacity='0'/%3E%3Crect x='1' y='0' width='1' height='1' fill='%23e6e2d6'/%3E%3Crect x='3' y='2' width='1' height='1' fill='%23e6e2d6'/%3E%3C/svg%3E");
-      background-size: 8px 8px;
+      background-color: #0f1214;
+      background-image: url("media/bg-dither.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
       image-rendering: pixelated;
+      pointer-events: none;
     }
 
     .title {
@@ -85,6 +73,7 @@
 
     .profile-pic {
       border: 2px solid #555555;
+      background-color: #0f1214;
       display: block;
     }
 
@@ -96,6 +85,7 @@
 
     .page-switcher {
       border: 2px solid #555555;
+      background-color: #0f1214;
       margin-top: 8px;
     }
 
@@ -208,6 +198,7 @@
 
     .mainpage {
       border: 2px solid #555555;
+      background-color: #0f1214;
       min-width: 350px;
       max-width: 60%;
       flex-shrink: 1;
