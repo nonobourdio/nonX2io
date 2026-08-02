@@ -30,25 +30,26 @@
     "name": "Ressources",
     "children": [
       {
+        "name": "Addons Blender",
+        "children": [
+          {
+            "name": "Mes Addons",
+            "path": "Ressources/Addons Blender/Mes Addons"
+          }
+        ],
+        "path": "Ressources/Addons Blender"
+      },
+      {
         "name": "Blender Cheatsheet",
         "path": "Ressources/Blender Cheatsheet"
       },
       {
-        "name": "Extensions",
-        "children": [
-          {
-            "name": "Addons Blender",
-            "path": "Ressources/Extensions/Addons Blender"
-          },
-          {
-            "name": "Mes Addons",
-            "path": "Ressources/Extensions/Mes Addons"
-          }
-        ]
-      },
-      {
         "name": "Le bazar",
         "path": "Ressources/Le bazar"
+      },
+      {
+        "name": "Mod\u00e8les 3D",
+        "path": "Ressources/Mod\u00e8les 3D"
       },
       {
         "name": "Userscripts",

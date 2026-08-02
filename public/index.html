@@ -297,6 +297,51 @@
 
     .mainpage .split-cell img { max-width: 100%; height: auto; }
 
+    .mainpage .md-table {
+      margin: 16px 0;
+      overflow-x: auto;
+    }
+
+    .mainpage .md-table table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .mainpage .md-table th,
+    .mainpage .md-table td {
+      border: 1px solid #555;
+      padding: 6px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .mainpage .md-table th {
+      font-family: 'IBM BIOS';
+      font-weight: 400;
+      color: #e6e2d6;
+      background-color: #1a1e22;
+    }
+
+    .mainpage .md-table td {
+      color: #e6e2d6;
+    }
+
+    .mainpage .md-table tr:nth-child(even) td {
+      background-color: #12161a;
+    }
+
+    .mainpage .md-table img { max-width: 100%; height: auto; }
+
+    .mainpage .md-table table.md-table-fixed {
+      table-layout: fixed;
+    }
+
+    .mainpage .md-table table.md-table-fixed th,
+    .mainpage .md-table table.md-table-fixed td {
+      overflow-wrap: anywhere;
+    }
+
     .lightbox {
       display: none;
       position: fixed;
@@ -498,6 +543,56 @@
               color = color.trim();
               if (!link) return '';
               return '<a class="title-button" href="' + link + '" target="_blank" rel="noopener noreferrer" style="background-color:' + color + '">' + btnContent + '</a>';
+            });
+            md = md.replace(/\[table\]([\s\S]*?)\[\/table\]/gi, function(match, content) {
+              var lines = content.split('\n').map(function(s) { return s.trim(); }).filter(Boolean);
+              if (!lines.length) return '';
+              // Options: header=..., colwidth=...
+              var header = null;
+              var colwidths = null;
+              lines = lines.filter(function(line) {
+                var hm = line.match(/^header\s*=\s*(.+)$/i);
+                if (hm) { header = hm[1]; return false; }
+                var cm = line.match(/^colwidth\s*=\s*(.+)$/i);
+                if (cm) { colwidths = cm[1]; return false; }
+                return true;
+              });
+              function splitRow(line) {
+                return line.split('|').map(function(s) { return s.trim(); });
+              }
+              var headers = header ? splitRow(header) : null;
+              var widths = colwidths ? splitRow(colwidths).map(Number) : null;
+              var rows = lines.map(splitRow);
+              var cols = Math.max(headers ? headers.length : 0, widths ? widths.length : 0, rows.length ? Math.max.apply(null, rows.map(function(r) { return r.length; })) : 0);
+              // Proportional column widths from colwidth= (e.g. "2 | 3" -> 40% / 60%)
+              var widthPct = null;
+              if (widths && widths.length) {
+                var total = widths.reduce(function(a, b) { return (b > 0) ? a + b : a; }, 0);
+                if (total > 0) {
+                  widthPct = widths.map(function(w) { return (w > 0) ? (w / total * 100) : null; });
+                }
+              }
+              // Normalize rows to equal column count
+              function norm(row) {
+                while (row.length < cols) row.push('');
+                return row.slice(0, cols);
+              }
+              var html = '<div class="md-table"><table' + (widthPct ? ' class="md-table-fixed"' : '') + '>';
+              if (widthPct) {
+                html += '<colgroup>';
+                for (var ci = 0; ci < cols; ci++) {
+                  var p = widthPct[ci];
+                  html += p != null ? '<col style="width:' + p.toFixed(4) + '%">' : '<col>';
+                }
+                html += '</colgroup>';
+              }
+              if (headers) {
+                html += '<thead><tr>' + norm(headers).map(function(h) { return '<th>' + marked.parse(h) + '</th>'; }).join('') + '</tr></thead>';
+              }
+              html += '<tbody>' + rows.map(function(r) {
+                return '<tr>' + norm(r).map(function(c) { return '<td>' + marked.parse(c) + '</td>'; }).join('') + '</tr>';
+              }).join('') + '</tbody></table></div>';
+              return html;
             });
             const html = marked.parse(md);
             const temp = document.createElement('div');

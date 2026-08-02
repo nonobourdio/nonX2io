@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/Ressources/Extensions/Mes Addons.md",
+                "file": "public/Portfolio/currentfolder.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Mes Addons"
+              "title": "currentfolder"
             }
           }
         ]
@@ -41,9 +41,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -190,6 +188,9 @@
   },
   "active": "aa243d93831cfde4",
   "lastOpenFiles": [
+    "public/Ressources/Modèles 3D.md",
+    "public/Test Table.md",
+    "public/Ressources/Le bazar.md",
     "public/_verify_button.md",
     "public/Portfolio/Perso/Granny's House.md",
     "public/Portfolio/Perso/Rendus Divers.md",

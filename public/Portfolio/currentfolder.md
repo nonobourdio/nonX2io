@@ -1,2 +1,5 @@
-Pour l'instant il y a qu'un truc donc on pourrait se dire que la catégorie elle sert à rien mais je la laisse pour plus tard.
-En attendant appuyez juste sur 'Qor'
+Pas grand chose pour l'instant sur cette page, mais je prévois de mettre des card avec les clients dès que j'ai assez d'avis.
+En attendant les cards, en ce moment je bosse avec
+https://www.youtube.com/@FogMine/
+https://www.youtube.com/@SQUIDUU/
+https://www.youtube.com/@CulturAdventure/
