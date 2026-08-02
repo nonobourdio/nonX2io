@@ -6,8 +6,12 @@
         "name": "Perso",
         "children": [
           {
-            "name": "Rendus Bioxel-Nodes",
-            "path": "Portfolio/Perso/Rendus Bioxel-Nodes"
+            "name": "Granny's House",
+            "path": "Portfolio/Perso/Granny's House"
+          },
+          {
+            "name": "Rendus BioxelNodes",
+            "path": "Portfolio/Perso/Rendus BioxelNodes"
           },
           {
             "name": "Rendus Divers",
