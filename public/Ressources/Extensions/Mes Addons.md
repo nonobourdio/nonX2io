@@ -7,21 +7,21 @@ color=#e6e2d6
 
 Ils sont tous téléchargeables sur le lien Mega juste en haut, mais achetez les pour soutenir les devs s'ils vous sont utiles
 ## Animation / Rigging
-- Auto-Rig Pro
+- Auto Rig Pro
 - [Add Camera Rigs](https://extensions.blender.org/add-ons/add-camera-rigs/)
 
 ## Modeling / Geometry
 - [BoltFactory](https://extensions.blender.org/add-ons/boltfactory/)
 - [Bool Tool](https://extensions.blender.org/add-ons/bool-tool/)
-- [Curve Generator](https://extensions.blender.org/add-ons/curve-generator/)
-- [Extra Curve Objects](https://extensions.blender.org/add-ons/extra-curve-objectes/)
-- [Extra Mesh Objects](https://extensions.blender.org/add-ons/extra-mesh-objects/)
-- [Ramp Generator](https://extensions.blender.org/add-ons/ramp-generator/)
 - [Spline Generator](https://extensions.blender.org/add-ons/spline-generator/)
+- [Extra Mesh Objects](https://extensions.blender.org/add-ons/extra-mesh-objects/)
+- [Extra Curve Objects](https://extensions.blender.org/add-ons/extra-curve-objectes/)
 - GEO-SWARM
 
 ## Nodes / Materials
 - [Bioxel Nodes](https://extensions.blender.org/add-ons/bioxelnodes/)
+- [Ramp Generator](https://extensions.blender.org/add-ons/ramp-generator/)
+- [Curve Generator](https://extensions.blender.org/add-ons/curve-generator/)
 - [Ucupaint](https://extensions.blender.org/add-ons/ucupaint/)
 - b3dsdf
 - B-Ease Studio
@@ -35,15 +35,12 @@ Ils sont tous téléchargeables sur le lien Mega juste en haut, mais achetez les
 - BlenderKit
 - Sketchfab Plugin
 - BlenderGIS
-- botaniq full
+- Botaniq
 - Simply Cloth Studio
 
 ## UI / Workflow
 - [3D Viewport Pie Menus](https://extensions.blender.org/add-ons/viewport-pie-menus/)
 - N Panel Sub Tabs
 - Discord Rich Presence
-- renderBeamer
-
-Tous les addons dont je me sers :
-
+- RenderBeamer (GarageFarm)
 
