@@ -94,7 +94,9 @@
     }
 
     .tree li {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
       position: relative;
       padding-left: calc(2 * var(--spacing) - var(--radius) - 2px);
       line-height: var(--spacing);
@@ -130,6 +132,7 @@
     .tree .toggle {
       cursor: pointer;
       display: inline-block;
+      flex: 0 0 auto;
       width: 14px;
       text-align: center;
       user-select: none;
@@ -152,8 +155,20 @@
     }
     .tree .toggle-spacer {
       display: inline-block;
+      flex: 0 0 auto;
       width: 14px;
       margin-right: 2px;
+    }
+
+    .tree li > a,
+    .tree li > span:not(.toggle):not(.toggle-spacer) {
+      flex: 1 1 auto;
+      min-width: 0;
+      word-break: break-word;
+    }
+
+    .tree li > ul {
+      flex: 1 0 100%;
     }
 
     .mainpage {
@@ -424,13 +439,14 @@
     } else {
       marked.setOptions({ breaks: true, gfm: true });
 
-      function loadPage(name) {
-        fetch(name + '.md')
-          .then(res => {
-            if (!res.ok) throw new Error('Page introuvable');
-            return res.text();
-          })
-          .then(md => {
+      function pageUrls(name) {
+        const kind = pageMap[name];
+        if (kind === 'folder') return [name + '/currentfolder.md'];
+        if (kind === 'leaf') return [name + '.md'];
+        return [name + '.md', name + '/currentfolder.md'];
+      }
+
+      function renderPage(md) {
             md = md.replace(/\[video:([^\]]+)\]/g, '$1');
             md = md.replace(/\[(https?:\/\/[^\]]+\.(mp4|webm|ogg))\]/gi, '$1');
             md = md.replace(/\[vimeo:([^\]]+)\]/g, '<div class="site-video"><iframe src="https://player.vimeo.com/video/$1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>');
@@ -502,11 +518,28 @@
               };
               imgs.forEach(i => { if (i.complete) apply(); else i.addEventListener('load', apply); });
             });
-          })
-          .catch(err => {
+      }
+
+      function loadPage(name) {
+        const urls = pageUrls(name);
+        const tryFetch = (i) => {
+          if (i >= urls.length) {
             document.querySelector('.mainpage-title').textContent = '';
-            document.querySelector('.mainpage-content').innerHTML = `<p>Erreur : ${err.message}</p>`;
-          });
+            document.querySelector('.mainpage-content').innerHTML =
+              `<p>Erreur : Page introuvable</p>`;
+            return;
+          }
+          // cache-busting suffix prevents the browser from serving a
+          // stale cached copy when editing locally.
+          fetch(urls[i] + '?t=' + Date.now())
+            .then(res => {
+              if (!res.ok) throw new Error('not ok');
+              return res.text();
+            })
+            .then(md => renderPage(md))
+            .catch(() => tryFetch(i + 1));
+        };
+        tryFetch(0);
       }
 
       document.querySelector('.page-switcher').addEventListener('click', e => {
@@ -555,22 +588,40 @@
         return li;
       }
 
+      const pageMap = {};
+
+      function registerPages(items) {
+        for (const item of items) {
+          if (item.path) {
+            pageMap[item.path] = item.children ? 'folder' : 'leaf';
+          }
+          if (item.children) registerPages(item.children);
+        }
+      }
+
       function buildTree() {
-        fetch('tree-content.json')
+        // cache-bust so a locally edited tree-content.json is always
+        // re-fetched instead of being served from browser cache.
+        fetch('tree-content.json?t=' + Date.now())
           .then(r => r.json())
           .then(pages => {
+            registerPages(pages);
             const container = document.querySelector('.page-switcher .tree');
             container.innerHTML = '';
             for (const item of pages) {
               container.appendChild(createItem(item));
             }
+            // Load the initial page now that pageMap is populated.
+            const initialPage = location.hash.slice(1) || 'Home';
+            loadPage(initialPage);
           })
-          .catch(() => {});
+          .catch(() => {
+            document.querySelector('.mainpage-content').innerHTML =
+              '<p style="color:#f88">Erreur : impossible de charger l\'arbre.</p>';
+          });
       }
 
       buildTree();
-      const initialPage = location.hash.slice(1) || 'Home';
-      loadPage(initialPage);
 
       const lightbox = document.getElementById('lightbox');
       lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
