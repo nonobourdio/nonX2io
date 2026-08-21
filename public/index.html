@@ -226,7 +226,8 @@
     .mainpage-title .title-button {
       font-family: 'IBM BIOS';
       font-size: 16px;
-      color: #0f1214;
+      color: #e6e2d6;
+      background-color: #0f1214;
       padding: 6px 16px;
       text-decoration: none;
       border: 2px solid #555;
@@ -542,7 +543,7 @@
               var color = (content.match(/color\s*=\s*(.+)$/im) || [])[1] || '#e6e2d6';
               color = color.trim();
               if (!link) return '';
-              return '<a class="title-button" href="' + link + '" target="_blank" rel="noopener noreferrer" style="background-color:' + color + '">' + btnContent + '</a>';
+              return '<a class="title-button" href="' + link + '" target="_blank" rel="noopener noreferrer" style="color:' + color + '">' + btnContent + '</a>';
             });
             md = md.replace(/\[table\]([\s\S]*?)\[\/table\]/gi, function(match, content) {
               var lines = content.split('\n').map(function(s) { return s.trim(); }).filter(Boolean);

@@ -9,7 +9,6 @@ header=Site | Avis
 [DP/3D Models](https://www.downloadpirate.com/stock-elements/3d-models/) | La quasi-totalité de la bibliothèque KitBash Gratuitement
 [3DModel.org](https://3d-model.org/) | Top, mais le contenu est un peu vieillissant, et beaucoup sont compatibles uniquement avec 3DSMAX
 [CGDownload](https://cgdownload.net/)| Très pratique, il faut juste avoir un traducteur russe
-[DesireFX](https://www.desirefx.com/) | Vraiment boosté + Ressource design
 [PolyPizza](https://poly.pizza/) | Modèles low poly
 [PolyHaven](https://polyhaven.com/all) | Pas totalement gratuit mais très qualitatif
 [AMD GPUOpen](https://matlib.gpuopen.com) | Classique

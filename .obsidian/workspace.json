@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "accde199cdc437d4",
+        "id": "74de9c1eb1275d5d",
         "type": "tabs",
         "children": [
           {
-            "id": "aa243d93831cfde4",
+            "id": "27e198fb4acd335a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "public/Ressources/Textures.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Textures"
+              "title": "New tab"
             }
           }
         ]
@@ -188,18 +184,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "aa243d93831cfde4",
+  "active": "27e198fb4acd335a",
   "lastOpenFiles": [
-    "public/Ressources/Modèles 3D.md",
+    "public/Perso",
+    "public/favicon.svg",
+    "IDEA.md",
+    "public/Ressources/Addons Blender/Mes Addons.md",
+    "public/Ressources/Addons Blender/currentfolder.md",
     "public/Ressources/Textures.md",
+    "public/_verify_btn.md",
+    "public/Ressources/Modèles 3D.md",
     "public/Ressources/Le bazar.md",
     "public/Ressources/Untitled",
     "public/Ressources/Extensions/Mes Addons.md",
     "public/media/profile.png",
     "public/media/bg-dither.png",
     "public/Ressources/currentfolder.md",
-    "public/Ressources/Addons Blender/Mes Addons.md",
-    "public/Ressources/Addons Blender/currentfolder.md",
     "public/Ressources/Addons Blender",
     "public/Portfolio/currentfolder.md",
     "public/_verify_button.md",
@@ -221,8 +221,6 @@
     "images/Bioxel/bioxel2screenshotdf.png",
     "bioxel1render.png.url",
     "images/Bioxel/bioxel6compositing.png",
-    "images/Bioxel/bioxel3compositing.png",
-    "IDEA.md",
     "_test_gallery.py",
     "public/GalleryTest.md",
     "public/Portfolio/Qor.md",

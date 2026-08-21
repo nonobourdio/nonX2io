@@ -23,7 +23,7 @@ Ils sont tous téléchargeables sur le lien Mega juste en haut, mais achetez les
 - [Ramp Generator](https://extensions.blender.org/add-ons/ramp-generator/)
 - [Curve Generator](https://extensions.blender.org/add-ons/curve-generator/)
 - [Ucupaint](https://extensions.blender.org/add-ons/ucupaint/)
-- b3dsdf
+- [b3dsdf](https://github.com/williamchange/b3dsdf)
 - B-Ease Studio
 - Frosty Ice Tools
 - [Procedural Tiles](https://extensions.blender.org/add-ons/proceduraltiles/)
@@ -32,7 +32,7 @@ Ils sont tous téléchargeables sur le lien Mega juste en haut, mais achetez les
 - [T3D GN Presets](https://extensions.blender.org/add-ons/t3d-gn-presets/)
 
 ## Assets / Import
-- BlenderKit
+- [BlenderKit](https://www.blendkit.com/)
 - Sketchfab Plugin
 - BlenderGIS
 - Botaniq
