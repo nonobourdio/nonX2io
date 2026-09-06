@@ -227,13 +227,25 @@
       background-color: #0f1214;
       padding: 6px 16px;
       text-decoration: none;
-      border: 2px solid #555;
+      border: 2px solid;
+      border-color: #666 #500 #500 #666;
+      box-shadow:
+        inset 1px 1px 0 rgba(230, 226, 214, 0.08),
+        inset -1px -1px 0 rgba(0, 0, 0, 0.6);
       white-space: nowrap;
       flex-shrink: 0;
     }
 
     .mainpage-title .title-button:hover {
-      opacity: 0.8;
+      background-color: #1a1e22;
+    }
+
+    .mainpage-title .title-button:active {
+      border-color: #d8d4d3 #666 #666 #d8d4d3;
+      box-shadow:
+        inset 1px 1px 0 rgba(0, 0, 0, 0.6),
+        inset -1px -1px 0 rgba(230, 226, 214, 0.08);
+      padding: 7px 15px 5px 17px;
     }
 
     .mainpage h1 {
