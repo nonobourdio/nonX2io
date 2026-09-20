@@ -4,6 +4,8 @@ C'est les rendus que je fais sur mon temps libre avec l'addon [Bioxel Nodes](htt
 
 ---
 [split]
+Project files : https://nonobourdio.gumroad.com/l/finwhale
+
 L'objectif de l'addon c'est de permettre à Blender d'interpretter de l'imagerie médicale et d'en faire un volume en 3D.
 
 Le site que j'ai utilisé pour télécharger les images médicales c'est [morphosource](https://www.morphosource.org/) et c'est des fichiers en *.tif* *.nrrd* et *.nii*
