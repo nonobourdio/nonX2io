@@ -48,12 +48,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/Ressources/Le bazar.md",
+                "file": "public/Ressources/3D/Node groups/Compositing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Le bazar"
+              "title": "Compositing"
             }
           }
         ]
@@ -223,22 +223,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "ce7297ac88d667eb",
+  "active": "2f32a08a8f046449",
   "lastOpenFiles": [
-    "public/Portfolio/Perso/2026/BioxelNodes.md",
+    "public/Ressources/3D/Node groups/Geometry Nodes.md",
+    "public/Ressources/3D/Node groups/Shaders.md",
+    "public/Ressources/3D/Node groups/Compositing.md",
+    "public/Portfolio/Perso/2026/Magazine Porsche.md",
+    "images/nodegroups/mpcomp.webp",
+    "public/Ressources/Internet/FMHY.md",
+    "public/Ressources/Le bazar.md",
     "public/Portfolio/Perso/2026/Chaines.md",
+    "public/Portfolio/Perso/2026/BioxelNodes.md",
     "public/Portfolio/Perso/2025/Granny's House.md",
     "public/Ressources/3D/Addons Blender/Mes Addons.md",
     "public/Home.md",
     "public/Ressources/Montage/SFX.md",
     "public/Ressources/3D/Textures.md",
-    "public/Ressources/Le bazar.md",
     "public/Ressources/currentfolder.md",
     "public/Portfolio/Perso/2025/Character design.md",
     "images/chaines_wireframe.webp",
     "images/chaines.webp",
     "public/Portfolio/Perso/Rendus Divers.md",
-    "public/Portfolio/Perso/2026/Magazine Porsche.md",
     "public/Portfolio/Perso/2025/Bonhomme vert.md",
     "public/Ressources/3D/Blender Cheatsheet.md",
     "public/Portfolio/Perso/2025/Concours Blender.md",
@@ -252,21 +257,15 @@
     "images/pdp/fogmine.jpg",
     "images/pdp",
     "images/minia_fog.webp",
-    "public/Ressources/3D/Node groups/Shaders.md",
     "public/Portfolio/Perso/2026",
     "public/Portfolio/Perso/2025",
-    "public/Ressources/3D/Node groups/Geometry Nodes.md",
-    "public/Ressources/3D/Node groups/Compositing.md",
     "images/nodegroups/b3dsdf/nodes.png",
-    "images/nodegroups/b3dsdf/stardemo.png",
     "images/nodegroups/b3dsdf",
     "images/nodegroups",
     "public/Ressources/Blender/Node groups.md",
     "public/Ressources/Design/The People's Design Library.md",
     "public/Ressources/3D/Node groups",
     "public/Ressources/Blender/Untitled.md",
-    "public/Ressources/3D/Addons Blender/Sites.md",
-    "public/Ressources/Internet/Userscripts.md",
     "public/Ressources/Internet",
     "public/Ressources/Montage",
     "public/Ressources/Design",

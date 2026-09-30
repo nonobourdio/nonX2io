@@ -1,0 +1,3 @@
+# Compositing node-groups
+## MP_Comp
+Un indispensable selon moi, gratuit et très complet. C'est incomparable aux assets natifs de Blender, il y a des **effets** très poussés, des **outils** permettant de nettoyer des masks (despeckle), des **primitives** (triangles, carrés et rond) animables, des **transitions** ect...

@@ -3,9 +3,10 @@ import json, os, re, sys
 root = sys.argv[1] if len(sys.argv) > 1 else 'public'
 
 # Markdown files that live on disk but must NOT appear in the tree.
-# 'Home' is the default landing page (loaded when no hash is set), so it
-# has no reason to clutter the navigation.
-EXCLUDE = {'Home.md'}
+# Currently empty: 'Home' is the landing page AND shows in the tree
+# (highlighted as current when no hash is set). Keep the mechanism for
+# future hidden pages.
+EXCLUDE = set()
 
 # A folder is expanded in the tree at launch when its currentfolder.md
 # contains the marker <!-- tree: open -->. Absent marker = collapsed by

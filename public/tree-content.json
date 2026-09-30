@@ -1,70 +1,149 @@
 [
   {
+    "name": "Home",
+    "path": "Home"
+  },
+  {
     "name": "Portfolio",
     "children": [
+      {
+        "name": "Commissions",
+        "children": [
+          {
+            "name": "Qor",
+            "path": "Portfolio/Commissions/Qor"
+          }
+        ],
+        "path": "Portfolio/Commissions",
+        "open": true
+      },
       {
         "name": "Perso",
         "children": [
           {
-            "name": "BioxelNodes",
-            "path": "Portfolio/Perso/BioxelNodes"
+            "name": "2025",
+            "children": [
+              {
+                "name": "Bonhomme vert",
+                "path": "Portfolio/Perso/2025/Bonhomme vert"
+              },
+              {
+                "name": "Character design",
+                "path": "Portfolio/Perso/2025/Character design"
+              },
+              {
+                "name": "Concours Blender",
+                "path": "Portfolio/Perso/2025/Concours Blender"
+              },
+              {
+                "name": "Granny's House",
+                "path": "Portfolio/Perso/2025/Granny's House"
+              }
+            ]
           },
           {
-            "name": "Granny's House",
-            "path": "Portfolio/Perso/Granny's House"
-          },
-          {
-            "name": "Magazine Porsche",
-            "path": "Portfolio/Perso/Magazine Porsche"
-          },
-          {
-            "name": "Rendus Divers",
-            "path": "Portfolio/Perso/Rendus Divers"
+            "name": "2026",
+            "children": [
+              {
+                "name": "BioxelNodes",
+                "path": "Portfolio/Perso/2026/BioxelNodes"
+              },
+              {
+                "name": "Chaines",
+                "path": "Portfolio/Perso/2026/Chaines"
+              },
+              {
+                "name": "Magazine Porsche",
+                "path": "Portfolio/Perso/2026/Magazine Porsche"
+              }
+            ]
           }
         ]
-      },
-      {
-        "name": "Qor",
-        "path": "Portfolio/Qor"
       }
     ],
-    "path": "Portfolio"
+    "path": "Portfolio",
+    "open": true
   },
   {
     "name": "Ressources",
     "children": [
       {
-        "name": "Addons Blender",
+        "name": "3D",
         "children": [
           {
-            "name": "Mes Addons",
-            "path": "Ressources/Addons Blender/Mes Addons"
+            "name": "Addons Blender",
+            "children": [
+              {
+                "name": "Mes Addons",
+                "path": "Ressources/3D/Addons Blender/Mes Addons"
+              },
+              {
+                "name": "Sites",
+                "path": "Ressources/3D/Addons Blender/Sites"
+              }
+            ]
           },
           {
-            "name": "Sites",
-            "path": "Ressources/Addons Blender/Sites"
+            "name": "Blender Cheatsheet",
+            "path": "Ressources/3D/Blender Cheatsheet"
+          },
+          {
+            "name": "Mod\u00e8les 3D",
+            "path": "Ressources/3D/Mod\u00e8les 3D"
+          },
+          {
+            "name": "Node groups",
+            "children": [
+              {
+                "name": "Compositing",
+                "path": "Ressources/3D/Node groups/Compositing"
+              },
+              {
+                "name": "Geometry Nodes",
+                "path": "Ressources/3D/Node groups/Geometry Nodes"
+              },
+              {
+                "name": "Shaders",
+                "path": "Ressources/3D/Node groups/Shaders"
+              }
+            ]
+          },
+          {
+            "name": "Textures",
+            "path": "Ressources/3D/Textures"
           }
         ]
       },
       {
-        "name": "Blender Cheatsheet",
-        "path": "Ressources/Blender Cheatsheet"
+        "name": "Design",
+        "children": [
+          {
+            "name": "The People's Design Library",
+            "path": "Ressources/Design/The People's Design Library"
+          }
+        ]
+      },
+      {
+        "name": "Internet",
+        "children": [
+          {
+            "name": "Userscripts",
+            "path": "Ressources/Internet/Userscripts"
+          }
+        ]
       },
       {
         "name": "Le bazar",
         "path": "Ressources/Le bazar"
       },
       {
-        "name": "Mod\u00e8les 3D",
-        "path": "Ressources/Mod\u00e8les 3D"
-      },
-      {
-        "name": "Textures",
-        "path": "Ressources/Textures"
-      },
-      {
-        "name": "Userscripts",
-        "path": "Ressources/Userscripts"
+        "name": "Montage",
+        "children": [
+          {
+            "name": "SFX",
+            "path": "Ressources/Montage/SFX"
+          }
+        ]
       }
     ],
     "path": "Ressources"
