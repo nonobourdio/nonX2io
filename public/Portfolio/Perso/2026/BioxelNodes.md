@@ -2,11 +2,18 @@
 
 C'est les rendus que je fais sur mon temps libre avec l'addon [Bioxel Nodes](https://extensions.blender.org/add-ons/bioxelnodes/)
 
----
-[split]
-Project files : https://nonobourdio.gumroad.com/l/finwhale
+# 1
+[gallery]
+![bioxel1](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel1render.png)
+![bioxel1screenshot](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel1screenshot.png)
+[/gallery]
 
-L'objectif de l'addon c'est de permettre à Blender d'interpretter de l'imagerie médicale et d'en faire un volume en 3D.
+Free project files : https://nonobourdio.gumroad.com/l/finwhale
+
+# Explication
+
+[split]
+**L'objectif de l'addon c'est de permettre à Blender d'interpretter de l'imagerie médicale et d'en faire un volume en 3D.**
 
 Le site que j'ai utilisé pour télécharger les images médicales c'est [morphosource](https://www.morphosource.org/) et c'est des fichiers en *.tif* *.nrrd* et *.nii*
 Il y a une liste de tous les formats de fichiers sur le site de l'addon :
@@ -17,12 +24,6 @@ Et les textures utilisées viennent toutes de [Textures Labs](https://texturelab
 ---
 ![schema](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/schema.png)
 [/split]
-
-# 1
-[gallery]
-![bioxel1](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel1render.png)
-![bioxel1screenshot](https://raw.githubusercontent.com/nonobourdio/nonX2io/refs/heads/main/images/Bioxel/bioxel1screenshot.png)
-[/gallery]
 
 # 2
 [gallery]

@@ -302,6 +302,21 @@
       gap: 16px;
       margin: 16px 0;
       align-items: center;
+      position: relative;
+    }
+
+    /* Trait vertical séparant les deux cellules, identique au <hr>
+       (1px solid #555) : dessiné au milieu du gap, sur toute la
+       hauteur de la rangée. */
+    .mainpage .split-row::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: calc(50% - 0.5px);
+      width: 1px;
+      background: #555;
+      pointer-events: none;
     }
 
     .mainpage .split-cell {
@@ -457,6 +472,10 @@
 
       .mainpage .split-row {
         flex-direction: column;
+      }
+
+      .mainpage .split-row::before {
+        display: none;
       }
 
       .mainpage .split-cell {

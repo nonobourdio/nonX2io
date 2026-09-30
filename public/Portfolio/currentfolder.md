@@ -1,7 +1,8 @@
 <!-- tree: open -->
-Pas grand chose pour l'instant sur cette page, mais je prévois de mettre des card avec les clients dès que j'ai assez d'avis.
-En attendant les cards, en ce moment je bosse avec :
+Salut, je m'appelle Noé, je suis 3D artist sur Blender, et j'utilise aussi plein d'autre logiciels qui peuvent êtres aussi intégrés à mon workflow comme Affinity, Cavalry, After Effects, DaVinci Resolve et plein d'autres.
 
-https://www.youtube.com/@FogMine/
-https://www.youtube.com/@SQUIDUU/
-https://www.youtube.com/@CulturAdventure/
+Ici vous allez trouver tout mon travail, dans deux catégories :
+- Commission (pour des clients)
+- Perso (pour le fun)
+
+J'essaie de partager tous mes fichiers de travail perso (.blend et autres) gratuitement sur [Gumroad](https://gumroad.com/) et ceux de mes commission quand le client est d'accord.
