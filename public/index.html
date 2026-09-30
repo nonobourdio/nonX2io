@@ -660,7 +660,17 @@
 
       function highlightCurrent(name) {
         document.querySelectorAll('.tree [data-page]').forEach(el => {
-          el.classList.toggle('current', el.dataset.page === name);
+          const current = el.dataset.page === name;
+          el.classList.toggle('current', current);
+          if (current) {
+            // Déplie les dossiers parents pour que la page courante
+            // reste visible dans le tree.
+            let li = el.closest('li');
+            while (li) {
+              li.classList.remove('collapsed');
+              li = li.parentElement ? li.parentElement.closest('li') : null;
+            }
+          }
         });
       }
 
@@ -701,13 +711,20 @@
       });
 
       window.addEventListener('hashchange', () => {
-        const page = location.hash.slice(1) || 'Home';
+        // location.hash renvoie le fragment percent-encodé
+        // ("Ressources/Le%20bazar") : on le decode pour qu'il corresponde
+        // aux valeurs data-page du tree.
+        const page = decodeURIComponent(location.hash.slice(1)) || 'Home';
         loadPage(page);
       });
 
       function createItem(item) {
         const li = document.createElement('li');
         if (item.children) {
+          // Dossiers fermés au lancement, sauf si le dossier est marqué
+          // ouvert via <!-- tree: open --> dans son currentfolder.md
+          // (flag "open" dans tree-content.json).
+          if (!item.open) li.classList.add('collapsed');
           const toggle = document.createElement('span');
           toggle.className = 'toggle';
           li.appendChild(toggle);
@@ -757,7 +774,7 @@
               container.appendChild(createItem(item));
             }
             // Load the initial page now that pageMap is populated.
-            const initialPage = location.hash.slice(1) || 'Home';
+            const initialPage = decodeURIComponent(location.hash.slice(1)) || 'Home';
             loadPage(initialPage);
           })
           .catch(() => {

@@ -6,12 +6,16 @@
         "name": "Perso",
         "children": [
           {
+            "name": "BioxelNodes",
+            "path": "Portfolio/Perso/BioxelNodes"
+          },
+          {
             "name": "Granny's House",
             "path": "Portfolio/Perso/Granny's House"
           },
           {
-            "name": "Rendus BioxelNodes",
-            "path": "Portfolio/Perso/Rendus BioxelNodes"
+            "name": "Magazine Porsche",
+            "path": "Portfolio/Perso/Magazine Porsche"
           },
           {
             "name": "Rendus Divers",
@@ -35,9 +39,12 @@
           {
             "name": "Mes Addons",
             "path": "Ressources/Addons Blender/Mes Addons"
+          },
+          {
+            "name": "Sites",
+            "path": "Ressources/Addons Blender/Sites"
           }
-        ],
-        "path": "Ressources/Addons Blender"
+        ]
       },
       {
         "name": "Blender Cheatsheet",
@@ -50,6 +57,10 @@
       {
         "name": "Mod\u00e8les 3D",
         "path": "Ressources/Mod\u00e8les 3D"
+      },
+      {
+        "name": "Textures",
+        "path": "Ressources/Textures"
       },
       {
         "name": "Userscripts",

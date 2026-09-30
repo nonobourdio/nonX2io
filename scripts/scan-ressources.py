@@ -1,4 +1,4 @@
-import json, os, sys
+import json, os, re, sys
 
 root = sys.argv[1] if len(sys.argv) > 1 else 'public'
 
@@ -6,6 +6,17 @@ root = sys.argv[1] if len(sys.argv) > 1 else 'public'
 # 'Home' is the default landing page (loaded when no hash is set), so it
 # has no reason to clutter the navigation.
 EXCLUDE = {'Home.md'}
+
+# A folder is expanded in the tree at launch when its currentfolder.md
+# contains the marker <!-- tree: open -->. Absent marker = collapsed by
+# default. As an HTML comment, the marker is invisible in the rendered
+# page and can sit anywhere in the file.
+OPEN_RE = re.compile(r'<!--\s*tree:\s*open\s*-->', re.IGNORECASE)
+
+
+def folder_is_open(dirpath):
+    with open(os.path.join(dirpath, 'currentfolder.md'), encoding='utf-8') as fp:
+        return bool(OPEN_RE.search(fp.read()))
 
 
 def scan_dir(dirpath, prefix):
@@ -27,6 +38,8 @@ def scan_dir(dirpath, prefix):
             item = {'name': entry, 'children': children}
             if os.path.exists(os.path.join(fullpath, 'currentfolder.md')):
                 item['path'] = f'{prefix}{entry}'
+                if folder_is_open(fullpath):
+                    item['open'] = True
             entries.append(item)
 
         elif entry.endswith('.md'):
