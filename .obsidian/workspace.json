@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/Portfolio/Perso/2026/Chaines.md",
+                "file": "public/Ressources/3D/Node groups/Compositing.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Chaines"
+              "title": "Compositing"
             }
           }
         ],
@@ -48,12 +48,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/Ressources/3D/Node groups/Compositing.md",
+                "file": "public/Ressources/3D/Node groups/Geometry Nodes.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Compositing"
+              "title": "Geometry Nodes"
             }
           }
         ]
@@ -225,14 +225,15 @@
   },
   "active": "2f32a08a8f046449",
   "lastOpenFiles": [
-    "public/Ressources/3D/Node groups/Geometry Nodes.md",
-    "public/Ressources/3D/Node groups/Shaders.md",
     "public/Ressources/3D/Node groups/Compositing.md",
+    "public/Portfolio/Perso/2026/Chaines.md",
+    "public/Ressources/3D/Node groups/Geometry Nodes.md",
+    "images/nodegroups/higgsas.webp",
+    "public/Ressources/3D/Node groups/Shaders.md",
     "public/Portfolio/Perso/2026/Magazine Porsche.md",
     "images/nodegroups/mpcomp.webp",
     "public/Ressources/Internet/FMHY.md",
     "public/Ressources/Le bazar.md",
-    "public/Portfolio/Perso/2026/Chaines.md",
     "public/Portfolio/Perso/2026/BioxelNodes.md",
     "public/Portfolio/Perso/2025/Granny's House.md",
     "public/Ressources/3D/Addons Blender/Mes Addons.md",
@@ -259,7 +260,6 @@
     "images/minia_fog.webp",
     "public/Portfolio/Perso/2026",
     "public/Portfolio/Perso/2025",
-    "images/nodegroups/b3dsdf/nodes.png",
     "images/nodegroups/b3dsdf",
     "images/nodegroups",
     "public/Ressources/Blender/Node groups.md",
