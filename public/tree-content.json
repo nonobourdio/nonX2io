@@ -7,19 +7,25 @@
     "name": "Portfolio",
     "children": [
       {
-        "name": "Commissions",
-        "children": [
-          {
-            "name": "Qor",
-            "path": "Portfolio/Commissions/Qor"
-          }
-        ],
-        "path": "Portfolio/Commissions",
-        "open": true
-      },
-      {
         "name": "Perso",
         "children": [
+          {
+            "name": "2026",
+            "children": [
+              {
+                "name": "Magazine Porsche",
+                "path": "Portfolio/Perso/2026/Magazine Porsche"
+              },
+              {
+                "name": "Chaines",
+                "path": "Portfolio/Perso/2026/Chaines"
+              },
+              {
+                "name": "BioxelNodes",
+                "path": "Portfolio/Perso/2026/BioxelNodes"
+              }
+            ]
+          },
           {
             "name": "2025",
             "children": [
@@ -40,25 +46,19 @@
                 "path": "Portfolio/Perso/2025/Granny's House"
               }
             ]
-          },
-          {
-            "name": "2026",
-            "children": [
-              {
-                "name": "BioxelNodes",
-                "path": "Portfolio/Perso/2026/BioxelNodes"
-              },
-              {
-                "name": "Chaines",
-                "path": "Portfolio/Perso/2026/Chaines"
-              },
-              {
-                "name": "Magazine Porsche",
-                "path": "Portfolio/Perso/2026/Magazine Porsche"
-              }
-            ]
           }
         ]
+      },
+      {
+        "name": "Commissions",
+        "children": [
+          {
+            "name": "Qor",
+            "path": "Portfolio/Commissions/Qor"
+          }
+        ],
+        "path": "Portfolio/Commissions",
+        "open": true
       }
     ],
     "path": "Portfolio",
@@ -127,14 +127,14 @@
         "name": "Internet",
         "children": [
           {
+            "name": "FMHY",
+            "path": "Ressources/Internet/FMHY"
+          },
+          {
             "name": "Userscripts",
             "path": "Ressources/Internet/Userscripts"
           }
         ]
-      },
-      {
-        "name": "Le bazar",
-        "path": "Ressources/Le bazar"
       },
       {
         "name": "Montage",

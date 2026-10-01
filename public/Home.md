@@ -1,8 +1,7 @@
 # Home
-Site en développement, pour l'instant c'est pas fameux mais j'y travaille.
-Le but à terme sera de faire un site sur lequel je pourrais vous partager des ressources utiles pour les 3D artists, monteurs et prestataires en général, ainsi que d'avoir un portfolio bien organisé.
-
-Il est possible que vous tombiez sur des pages vides, c'est un peu le chantier pour l'instant.
+Bienvenue sur mon site ! Il se navigue avec l'arborescence à gauche de l'écran. Le site est divisé en deux catégories :
+- Portfolio : pour les gens qui veulent voir ce que je produit
+- Ressources : un ensemble de ressources utiles, la large majorité est destiné à ceux qui créent
 
 ---
 
