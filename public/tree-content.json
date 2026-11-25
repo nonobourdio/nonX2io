@@ -47,7 +47,9 @@
               }
             ]
           }
-        ]
+        ],
+        "path": "Portfolio/Perso",
+        "open": true
       },
       {
         "name": "Commissions",
@@ -88,6 +90,10 @@
             "path": "Ressources/3D/Blender Cheatsheet"
           },
           {
+            "name": "Mat\u00e9riaux",
+            "path": "Ressources/3D/Mat\u00e9riaux"
+          },
+          {
             "name": "Mod\u00e8les 3D",
             "path": "Ressources/3D/Mod\u00e8les 3D"
           },
@@ -107,16 +113,16 @@
                 "path": "Ressources/3D/Node groups/Shaders"
               }
             ]
-          },
-          {
-            "name": "Textures",
-            "path": "Ressources/3D/Textures"
           }
         ]
       },
       {
         "name": "Design",
         "children": [
+          {
+            "name": "Textures",
+            "path": "Ressources/Design/Textures"
+          },
           {
             "name": "The People's Design Library",
             "path": "Ressources/Design/The People's Design Library"

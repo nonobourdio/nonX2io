@@ -393,6 +393,20 @@
 
     .mainpage hr { border: none; border-top: 1px solid #555; }
 
+    /* A subsite (any other .html page of the site) is a standalone page
+       loaded in a frame inside the panel. Its width gives the panel the
+       width of a long markdown page (never more than the panel's own
+       max-width); its height, set by the script as the page arrives,
+       fits the page. */
+    .mainpage iframe.subsite {
+      display: block;
+      width: 60vw;
+      max-width: 100%;
+      height: 0;
+      border: 0;
+      background-color: #0f1214;
+    }
+
     .mainpage .site-player {
       max-width: 100%;
       border: 1px solid #555;
@@ -459,6 +473,10 @@
       .mainpage {
         max-width: 100%;
         min-width: 0;
+      }
+
+      .mainpage iframe.subsite {
+        width: 100%;
       }
 
       .mainpage .image-row {
@@ -693,14 +711,192 @@
         });
       }
 
+      function showNotFound() {
+        document.querySelector('.mainpage-title').textContent = '';
+        document.querySelector('.mainpage-content').innerHTML =
+          `<p>Erreur : Page introuvable</p>`;
+      }
+
+      function isSubsite(name) {
+        return name.toLowerCase().endsWith('.html');
+      }
+
+      // A subsite is a standalone .html page of the site (a tree entry
+      // whose path ends in .html). It is loaded in a frame inside the
+      // panel, kept exactly as tall as its content so that it scrolls
+      // with the rest of the page instead of getting its own scrollbar.
+
+      // Folder holding the frame in the site. Links to the pages of the
+      // site are compared with it, whatever address the frame was opened
+      // at: Neocities answers "index.html" at "/index" without the
+      // extension, and a folder of the site works too.
+      const siteRoot = new URL('./', document.baseURI).pathname;
+      let unwatchSubsite = () => {};
+      let watchedSubsiteDoc = null;
+
+      function loadSubsite(name) {
+        const titleEl = document.querySelector('.mainpage-title');
+        const contentEl = document.querySelector('.mainpage-content');
+        if (!(name in pageMap)) {
+          showNotFound();
+          return;
+        }
+        titleEl.textContent = name.split('/').pop().replace(/\.html$/i, '');
+        contentEl.innerHTML = '';
+        const frame = document.createElement('iframe');
+        frame.className = 'subsite';
+        frame.title = titleEl.textContent;
+        // No scrollbar of its own: the frame is sized to fit the page.
+        frame.setAttribute('scrolling', 'no');
+        contentEl.appendChild(frame);
+        const updateTitle = () => {
+          const doc = frame.contentDocument;
+          if (!doc) return;
+          const title = doc.title.trim();
+          if (title && !/^untitled( page)?$/i.test(title)) titleEl.textContent = title;
+          frame.title = titleEl.textContent;
+        };
+        const watch = () => {
+          // The visitor may have moved to another page meanwhile.
+          if (!frame.isConnected) return;
+          watchSubsite(frame);
+          updateTitle();
+        };
+        frame.addEventListener('load', watch);
+        // cache-busting suffix, same reason as the markdown fetches
+        frame.src = name + '?t=' + Date.now();
+        whenSubsiteStarts(frame, doc => {
+          watch();
+          doc.addEventListener('DOMContentLoaded', updateTitle);
+        });
+      }
+
+      // Calls then(document) as soon as the page's document replaces the
+      // empty one of a new frame. The 'load' event only comes once every
+      // image has arrived, which can take seconds, and the frame has to
+      // follow the content while it arrives.
+      function whenSubsiteStarts(frame, then) {
+        const wait = tries => {
+          if (!frame.isConnected || tries > 750) return;
+          const doc = frame.contentDocument;
+          if (doc && doc.URL !== 'about:blank') then(doc);
+          else setTimeout(() => wait(tries + 1), 40);
+        };
+        wait(0);
+      }
+
+      // Width of a scrollbar in a page: 0 where scrollbars overlay the
+      // content instead of taking room.
+      function scrollbarWidth(doc) {
+        const probe = doc.createElement('div');
+        probe.style.cssText = 'position:absolute;top:-9999px;width:100px;height:100px;overflow:scroll';
+        (doc.body || doc.documentElement).appendChild(probe);
+        const width = probe.offsetWidth - probe.clientWidth;
+        probe.remove();
+        return width;
+      }
+
+      function fitSubsite(frame) {
+        const doc = frame.contentDocument;
+        if (!doc || !frame.isConnected) return;
+        const html = doc.documentElement;
+        const body = doc.body;
+        // Measured with the scrollbar of the page off: as long as the
+        // frame is too short the page has one, which narrows it and
+        // makes it taller than it will be once the frame fits. It would
+        // not even go away afterwards, the page overflowing with it.
+        frame.setAttribute('scrolling', 'no');
+        // The html box of an ordinary page is exactly as tall as its
+        // content whatever the frame height. A page sized on its window
+        // (height: 100%) is only known through its scroll height, which
+        // is never less than the frame height: it can only make it grow.
+        let height = Math.max(Math.ceil(html.getBoundingClientRect().height), body ? body.scrollHeight : 0);
+        if (html.scrollHeight > frame.clientHeight) height = Math.max(height, html.scrollHeight);
+        // A page wider than the panel (not by a few pixels of shadow or
+        // tilted corner) keeps a scrollbar to be scrolled sideways, which
+        // takes some of the height.
+        const wide = html.scrollWidth > html.clientWidth + 20;
+        if (wide) height += scrollbarWidth(doc);
+        // One pixel above the content: a scrollbar would appear on a
+        // fraction of a pixel. The height equal to the current one means
+        // the page is sized on its frame: it must stay as it is.
+        if (height !== frame.clientHeight) frame.style.height = height + 1 + 'px';
+        frame.setAttribute('scrolling', wide ? 'auto' : 'no');
+      }
+
+      function watchSubsite(frame) {
+        const win = frame.contentWindow;
+        const doc = frame.contentDocument;
+        // Already watched: the page only finished loading since.
+        if (doc === watchedSubsiteDoc) return;
+        unwatchSubsite();
+        watchedSubsiteDoc = doc;
+        const refit = () => fitSubsite(frame);
+        refit();
+        // The frame follows its content growing or shrinking: layout,
+        // images and fonts arriving, window resized...
+        const observer = new win.ResizeObserver(refit);
+        const observe = () => {
+          observer.observe(doc.documentElement);
+          if (doc.body) observer.observe(doc.body);
+        };
+        observe();
+        doc.addEventListener('DOMContentLoaded', observe);
+        win.addEventListener('load', refit, true);
+        if (doc.fonts) doc.fonts.ready.then(refit);
+        unwatchSubsite = () => {
+          observer.disconnect();
+          win.removeEventListener('load', refit, true);
+          watchedSubsiteDoc = null;
+        };
+        doc.addEventListener('click', e => onSubsiteClick(e, frame));
+      }
+
+      // Links of a subsite: to another page of the site (index.html#Page
+      // or any page of the tree) the frame navigates, to a section of the
+      // subsite the main window scrolls (the subsite itself cannot), to
+      // another website a new tab opens, like on markdown pages.
+      function onSubsiteClick(e, frame) {
+        if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        const a = e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        const url = new URL(a.href);
+        if (url.origin !== location.origin) {
+          if (!a.target || a.target === '_self') {
+            a.target = '_blank';
+            a.rel = 'noopener';
+          }
+        } else if (!a.target || a.target === '_self') {
+          if (['', 'index', 'index.html'].some(part => url.pathname === siteRoot + part)) {
+            e.preventDefault();
+            location.hash = url.hash ? decodeURIComponent(url.hash.slice(1)) : '';
+          } else if (url.pathname === frame.contentWindow.location.pathname) {
+            e.preventDefault();
+            const id = decodeURIComponent(url.hash.slice(1));
+            const target = id ? frame.contentDocument.getElementById(id) : null;
+            const top = target ? target.getBoundingClientRect().top : 0;
+            window.scrollTo({ top: frame.getBoundingClientRect().top + top + window.scrollY, behavior: 'smooth' });
+          } else {
+            const page = decodeURIComponent(url.pathname.slice(siteRoot.length));
+            if (!url.hash && page in pageMap) {
+              e.preventDefault();
+              location.hash = page;
+            }
+          }
+        }
+      }
+
       function loadPage(name) {
         highlightCurrent(name);
+        unwatchSubsite();
+        if (isSubsite(name)) {
+          loadSubsite(name);
+          return;
+        }
         const urls = pageUrls(name);
         const tryFetch = (i) => {
           if (i >= urls.length) {
-            document.querySelector('.mainpage-title').textContent = '';
-            document.querySelector('.mainpage-content').innerHTML =
-              `<p>Erreur : Page introuvable</p>`;
+            showNotFound();
             return;
           }
           // cache-busting suffix prevents the browser from serving a

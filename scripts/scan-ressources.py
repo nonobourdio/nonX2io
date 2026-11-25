@@ -8,6 +8,11 @@ root = sys.argv[1] if len(sys.argv) > 1 else 'public'
 # future hidden pages.
 EXCLUDE = set()
 
+# HTML files that live on disk but must NOT appear in the tree.
+# index.html is the frame itself (the page displaying everything else),
+# not a subsite.
+EXCLUDE_HTML = {'index.html'}
+
 # Tree behaviour markers, read from a folder's currentfolder.md. As HTML
 # comments they are invisible in the rendered page and can sit anywhere
 # in the file.
@@ -80,6 +85,15 @@ def scan_dir(dirpath, prefix, recent=False):
                 if OPEN_RE.search(content):
                     item['open'] = True
             entries.append(item)
+
+        elif entry.endswith('.html'):
+            # An .html file is a "subsite": a standalone page that the
+            # frame displays inside the main panel. Unlike a markdown
+            # leaf its path keeps the extension, which is how the frame
+            # tells a subsite from a markdown page.
+            if entry in EXCLUDE_HTML:
+                continue
+            entries.append({'name': entry[:-5], 'path': f'{prefix}{entry}', '_key': git_mtime(fullpath)})
 
         elif entry.endswith('.md'):
             # currentfolder.md is the folder's own landing page, not a
